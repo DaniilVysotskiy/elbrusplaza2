@@ -1,46 +1,31 @@
-<template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        elbrusplaza2
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
+<template lang="pug">
+  div
+    navigation
+    div
+      h1.title elbrusplaza2
+      h2.subtitle Nuxt.js project
+      .links
+        a.button--green(
           href="https://nuxtjs.org/"
           target="_blank"
-          class="button--green">Documentation</a>
-        <a
+        ) Documentation
+        a.button--grey(
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+        ) GitHub
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import navigation from '~/components/nav/nav.vue'
 
 export default {
   components: {
-    AppLogo
+    navigation
   }
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
+<style lang="scss">
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;

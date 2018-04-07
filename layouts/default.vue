@@ -21,6 +21,19 @@ html {
   margin: 0;
 }
 
+.container {
+  flex: 1 1 100;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .button--green {
   display: inline-block;
   border-radius: 4px;
