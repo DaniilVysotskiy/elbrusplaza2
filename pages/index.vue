@@ -1,31 +1,35 @@
 <template lang="pug">
   div
     navigation
-    div
-      h1.title elbrusplaza2
-      h2.subtitle Nuxt.js project
-      .links
-        a.button--green(
-          href="https://nuxtjs.org/"
-          target="_blank"
-        ) Documentation
-        a.button--grey(
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-        ) GitHub
+    hero
 </template>
 
 <script>
 import navigation from '~/components/nav/nav.vue'
+import hero from '~/components/hero/hero.vue'
 
 export default {
   components: {
-    navigation
+    navigation,
+    hero
   }
 }
 </script>
 
 <style lang="scss">
+.container {
+  flex: 1 1 100;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
@@ -41,9 +45,5 @@ export default {
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>

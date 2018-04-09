@@ -3,20 +3,131 @@
     .container
       .nav__wrapper
         .nav__logo
-          img.logo(src="")
+          img.logo(src="~/assets/icons/logo.png")
         .nav__menu.menu
           ul.menu__list
             li.menu__item.menu-item
-              a.menu-item__link(href="/") Главная
+              a.menu-item__link.menu-item__link--hotel.active(href="#") Отель
+            li.menu__item.menu-item
+              a.menu-item__link.menu-item__link--rooms(href="#rooms") Номера
+            li.menu__item.menu-item
+              a.menu-item__link.menu-item__link--feedback(href="#feedback") Отзывы
+            li.menu__item.menu-item
+              a.menu-item__link.menu-item__link--contacts(href="#contacts") Контакты
+          ul.menu__lang
+            li.menu__lang-item
+              a.menu__lang-button.active(href="#0") RU
+            li.menu__lang-item
+              a.menu__lang-button(href="#0") EN
 </template>
 
 <style lang="scss">
+@import url('assets/styles/_theme.scss');
   .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 60px 0;
     &__wrapper {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
+    }
+    &__menu {
+      background-color: var(--red);
+      background-image: url('~assets/imgs/nav-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+      min-width: 520px;
+      height: 50px;
+    }
+  }
+  .menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    &__list {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      margin: 0 -15px;
+      padding: 0;
+      list-style: none;
+    }
+    &__item {
+      flex: 1 1 auto;
+    }
+    &__lang {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 -15px;
+      padding: 0;
+      list-style: none;
+    }
+    &__lang-item {
+      margin: 0 15px;
+    }
+    &__lang-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: ThamesC;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--yellow);
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      &.active,
+      &:hover,
+      &:focus,
+      &:active {
+        font-style: italic;
+        font-weight: normal;
+        color: white;
+      }
+    }
+  }
+  .menu-item {
+    margin: 0 15px;
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: ThamesC;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--yellow);
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      &.active,
+      &:hover,
+      &:focus,
+      &:active {
+        font-style: italic;
+        font-weight: normal;
+        color: white;
+      }
+      &--hotel {
+        min-width: 60px;
+      }
+      &--rooms {
+        min-width: 78px;
+      }
+      &--feedback {
+        min-width: 80px;
+      }
+      &--contacts {
+        min-width: 110px;
+      }
     }
   }
 </style>
