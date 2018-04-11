@@ -3,11 +3,12 @@
     .container
       .nav__wrapper
         .nav__logo
-          img.logo(src="~/assets/icons/logo.png")
+          a.logo__wrapper(href="/")
+            img.logo(src="~/assets/icons/logo.png")
         .nav__menu.menu
           ul.menu__list
             li.menu__item.menu-item
-              a.menu-item__link.menu-item__link--hotel.active(href="#") Отель
+              a.menu-item__link.menu-item__link--hotel.active(href="#hotel") Отель
             li.menu__item.menu-item
               a.menu-item__link.menu-item__link--rooms(href="#rooms") Номера
             li.menu__item.menu-item
@@ -29,6 +30,7 @@
     left: 0;
     width: 100%;
     padding: 60px 0;
+    z-index: 100;
     &__wrapper {
       display: flex;
       flex-flow: row nowrap;
