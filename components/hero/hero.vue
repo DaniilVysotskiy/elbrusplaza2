@@ -24,6 +24,7 @@
     width: 100%;
     height: 0;
     padding-top: 61.75%;
+    margin-bottom: -12%;
     z-index: 2;
     &__info {
       position: absolute;

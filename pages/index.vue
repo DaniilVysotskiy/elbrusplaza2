@@ -2,16 +2,19 @@
   div
     navigation
     hero
+    hotel
 </template>
 
 <script>
 import navigation from '~/components/nav/nav.vue'
 import hero from '~/components/hero/hero.vue'
+import hotel from '~/components/hotel/hotel.vue'
 
 export default {
   components: {
     navigation,
-    hero
+    hero,
+    hotel
   }
 }
 </script>
@@ -24,6 +27,7 @@ export default {
   margin: 0 auto;
 }
 .section {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
