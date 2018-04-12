@@ -46,7 +46,7 @@
       &--wrapper {
         align-self: flex-end;
         margin-left: 8rem;
-        margin-bottom: 8rem;
+        margin-bottom: 7rem;
         width: 45%;
       }
     }
@@ -60,7 +60,7 @@
       text-transform: uppercase;
     }
     &__text {
-      font-size: .8rem;
+      font-size: 1rem;
       line-height: 1rem;
       color: white;
     }

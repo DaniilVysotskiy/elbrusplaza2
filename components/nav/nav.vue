@@ -4,7 +4,7 @@
       .nav__wrapper
         .nav__logo
           a.logo__wrapper(href="/")
-            img.logo(src="~/assets/icons/logo.png")
+            img.logo(:src="changeLogoOnScroll")
         .nav__menu.menu
           ul.menu__list
             li.menu__item.menu-item
@@ -21,6 +21,44 @@
             li.menu__lang-item
               a.menu__lang-button(href="#0") EN
 </template>
+
+<script>
+const bigLogo = require('~/assets/icons/logo.png');
+const smallLogo = require('~/assets/icons/logo_1.svg');
+
+export default {
+  data () {
+    return {
+      isTopOfPage: true
+    }
+  },
+  methods: {
+    handleScroll(event) {
+      if (window.scrollY > 1) {
+        this.isTopOfPage = false;
+      } else {
+        this.isTopOfPage = true;
+      }
+    }
+  },
+  computed: {
+    changeLogoOnScroll() {
+      if (this.isTopOfPage) {
+        return bigLogo;
+      } else {
+        return smallLogo;
+      }
+    }
+  },
+  beforeMount () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+}
+</script>
+
 
 <style lang="scss">
 @import url('assets/styles/_theme.scss');
@@ -45,6 +83,10 @@
       background-size: contain;
       min-width: 520px;
       height: 50px;
+    }
+    &__logo {
+      min-width: 75px;
+      min-height: 75px;
     }
   }
   .menu {
