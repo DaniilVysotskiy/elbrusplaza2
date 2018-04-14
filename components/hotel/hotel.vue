@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.section
+  section.section#hotel
     .hotel
       .container
         .hotel__wrapper
@@ -16,28 +16,30 @@
               .hotel__column
                 p.hotel__text
                   | В 2006 году здесь построили новую гондольную канатную дорогу французской фирмы POMA, идущую в параллель существующей маятниковой. Для проезда к лыжне и канатной дороге организован постоянный трансфер.
-          ul.hotel__pros
-            li.hotel__pros__item
-              img.hotel__pros__img(src="~/assets/icons/transfer.png")
-              span.hotel__pros__text Трансфер
-            li.hotel__pros__item
-              img.hotel__pros__img(src="~/assets/icons/restaurant.png")
-              span.hotel__pros__text Ресторан
-            li.hotel__pros__item
-              img.hotel__pros__img(src="~/assets/icons/sauna.png")
-              span.hotel__pros__text Сауна
-            li.hotel__pros__item
-              img.hotel__pros__img(src="~/assets/icons/gym.png")
-              span.hotel__pros__text Тренажерный зал
-            li.hotel__pros__item
-              img.hotel__pros__img(src="~/assets/icons/car.png")
-              span.hotel__pros__text Прокат
-            li.hotel__pros__item
-              img.hotel__pros__img(src="~/assets/icons/hall.png")
-              span.hotel__pros__text Банкетный зал
-            li.hotel__pros__item
-              img.hotel__pros__img(src="~/assets/icons/playground.png")
-              span.hotel__pros__text Детская площадка
+          .hotel__pros--wrapper
+            .container
+              ul.hotel__pros
+                li.hotel__pros__item
+                  img.hotel__pros__img(src="~/assets/icons/transfer.png")
+                  span.hotel__pros__text Трансфер
+                li.hotel__pros__item
+                  img.hotel__pros__img(src="~/assets/icons/restaurant.png")
+                  span.hotel__pros__text Ресторан
+                li.hotel__pros__item
+                  img.hotel__pros__img(src="~/assets/icons/sauna.png")
+                  span.hotel__pros__text Сауна
+                li.hotel__pros__item
+                  img.hotel__pros__img(src="~/assets/icons/gym.png")
+                  span.hotel__pros__text Тренажерный зал
+                li.hotel__pros__item
+                  img.hotel__pros__img(src="~/assets/icons/car.png")
+                  span.hotel__pros__text Прокат
+                li.hotel__pros__item
+                  img.hotel__pros__img(src="~/assets/icons/hall.png")
+                  span.hotel__pros__text Банкетный зал
+                li.hotel__pros__item
+                  img.hotel__pros__img(src="~/assets/icons/playground.png")
+                  span.hotel__pros__text Детская площадка
 </template>
 
 <style lang="scss">
@@ -46,6 +48,7 @@
   .hotel {
     width: 100%;
     height: 100vh;
+    min-height: 600px;
     position: relative;
     background-image: url(~/assets/imgs/hotel-bg.jpg);
     background-size: cover;
@@ -58,20 +61,21 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: var(--red);
+      background-color: var(--brand);
       opacity: .9;
       z-index: -1;
     }
     &__wrapper {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: 100%;
       height: 100vh;
+      min-height: 600px;
       z-index: 1;
     }
     &__about {
-      margin-top: 20rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -123,18 +127,28 @@
     }
     &__text {
       font-size: 1rem;
+      line-height:1.2rem;
       & + & {
         margin-top: 1rem;
       }
     }
     &__pros {
+      position: relative;
       list-style: none;
-      padding-top: 8rem;
       display: flex;
       flex-flow: row wrap;
       justify-content: flex-start;
       align-items: flex-end;
+      justify-self: flex-end;
+      align-self: flex-start;
+      padding: 0;
       margin: -20px;
+      &--wrapper {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        width: 100%;
+      }
       &__item {
         display: flex;
         flex-direction: column;
@@ -150,7 +164,10 @@
       &__text {
         font-size: 1.2rem;
         font-weight: 400;
+        line-height: 1.2rem;
         color: var(--yellow);
+        max-width: 100px;
+        height: 50px;
       }
     }
   }

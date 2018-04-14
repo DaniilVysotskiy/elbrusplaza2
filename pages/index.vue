@@ -23,6 +23,7 @@ export default {
 .container {
   flex: 1 1 100;
   max-width: 1170px;
+  height: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -34,20 +35,18 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  @media screen and (min-width: 1367px) {
+    .container {
+      max-width: 1170px;
+    }
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  @media screen and (max-width: 1366px) {
+    .container {
+      max-width: 1000px;
+    }
+  }
+
+
+
 </style>
