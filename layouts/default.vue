@@ -4,6 +4,10 @@
   </div>
 </template>
 
+<script>
+  export default {}
+</script>
+
 <style lang="scss">
 @import url('assets/styles/global.scss');
 
@@ -16,6 +20,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {

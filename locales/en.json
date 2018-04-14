@@ -1,0 +1,8 @@
+{
+	"links": {
+		"hotel": "Hotel",
+		"rooms": "Rooms",
+		"feedback": "reviews",
+		"contacts": "Contacts"
+	}
+}

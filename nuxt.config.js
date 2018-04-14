@@ -16,7 +16,17 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#ab0433' },
+  /*
+  ** Router
+  */
+  router: {
+    middleware: 'i18n'
+  },
+  plugins: ['~/plugins/i18n.js'],
+  generate: {
+    routes: ['/', '/room', '/en', '/en/room']
+  },
   /*
   ** Build configuration
   */
@@ -34,5 +44,6 @@ module.exports = {
         })
       }
     }
-  }
+  },
+
 }

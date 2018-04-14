@@ -8,28 +8,41 @@
         .nav__menu.menu
           ul.menu__list
             li.menu__item.menu-item
-              a.menu-item__link.menu-item__link--hotel.active(href="#hotel") Отель
+              a.menu-item__link.menu-item__link--hotel(href="#hotel") {{ $t('links.hotel') }}
             li.menu__item.menu-item
-              a.menu-item__link.menu-item__link--rooms(href="#rooms") Номера
+              a.menu-item__link.menu-item__link--rooms(href="#rooms") {{ $t('links.rooms') }}
             li.menu__item.menu-item
-              a.menu-item__link.menu-item__link--feedback(href="#feedback") Отзывы
+              a.menu-item__link.menu-item__link--feedback(href="#feedback") {{ $t('links.feedback') }}
             li.menu__item.menu-item
-              a.menu-item__link.menu-item__link--contacts(href="#contacts") Контакты
+              a.menu-item__link.menu-item__link--contacts(href="#contacts") {{ $t('links.contacts') }}
           ul.menu__lang
             li.menu__lang-item
-              a.menu__lang-button.active(href="#0") RU
+              nuxt-link.menu__lang-button(to="/" active-class="active" exact @click="setLang('ru')") RU
             li.menu__lang-item
-              a.menu__lang-button(href="#0") EN
+              nuxt-link.menu__lang-button(to="/en" active-class="active" @click="setLang('en')") EN
 </template>
 
 <script>
 const bigLogo = require('~/assets/icons/logo.png');
 const smallLogo = require('~/assets/icons/logo_1.svg');
 
+function throttle(actionFn) {
+  let isRunning = false;
+  return function () {
+    if (isRunning) return;
+    isRunning = true;
+    window.requestAnimationFrame(() => {
+      actionFn();
+      isRunning = false;
+    });
+  }
+}
+
 export default {
   data () {
     return {
-      isTopOfPage: true
+      isTopOfPage: true,
+      currentLang: 'ru'
     }
   },
   methods: {
@@ -39,6 +52,10 @@ export default {
       } else {
         this.isTopOfPage = true;
       }
+    },
+    setLang(lang) {
+      this.currentLang = lang;
+      this.$store.commit('SET_LANG', this.currentLang);
     }
   },
   computed: {
@@ -50,11 +67,15 @@ export default {
       }
     }
   },
+  created: function() {
+    this.currentLang = this.$store.state.locale;
+    console.log('created this.currentLang:', this.currentLang);
+  },
   beforeMount () {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', throttle(this.handleScroll));
   },
   beforeDestroy () {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', throttle(this.handleScroll));
   }
 }
 </script>
@@ -129,6 +150,10 @@ export default {
       text-transform: uppercase;
       text-decoration: none;
       text-align: center;
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
       &.active,
       &:hover,
       &:focus,
