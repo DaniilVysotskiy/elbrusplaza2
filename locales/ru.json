@@ -2,7 +2,7 @@
 	"links": {
 		"hotel": "Отель",
 		"rooms": "Номера",
-		"feedback": "Отзывы",
+		"reviews": "Отзывы",
 		"contacts": "Контакты"
 	}
 }

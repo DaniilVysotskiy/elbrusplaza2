@@ -1,8 +1,8 @@
 <template lang="pug">
   section.section#hotel
-    .hotel
+    .hotel.min-height
       .container
-        .hotel__wrapper
+        .hotel__wrapper.min-height
           .hotel__about
             h2.hotel__title
               | Об отеле
@@ -42,13 +42,25 @@
                   span.hotel__pros__text Детская площадка
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+
+    }
+  },
+  methods: {
+
+  }
+}
+</script>
+
 <style lang="scss">
 @import url('assets/styles/_theme.scss');
 
   .hotel {
     width: 100%;
-    height: 100vh;
-    min-height: 600px;
+    height: 101vh;
     position: relative;
     background-image: url(~/assets/imgs/hotel-bg.jpg);
     background-size: cover;
@@ -72,7 +84,6 @@
       justify-content: center;
       width: 100%;
       height: 100vh;
-      min-height: 600px;
       z-index: 1;
     }
     &__about {
@@ -120,32 +131,28 @@
     }
     &__column {
       flex: 1 1 auto;
-      max-width: 400px;
+      max-width: 390px;
       & + & {
-        margin-left: 3rem;
+        margin-left: 2rem;
       }
     }
     &__text {
       font-size: 1rem;
       line-height:1.2rem;
-      & + & {
-        margin-top: 1rem;
-      }
+      margin-bottom: 1rem;
     }
     &__pros {
       position: relative;
       list-style: none;
       display: flex;
       flex-flow: row wrap;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: flex-end;
-      justify-self: flex-end;
-      align-self: flex-start;
-      padding: 0;
+      padding: 0 2rem;
       margin: -20px;
       &--wrapper {
         position: absolute;
-        bottom: 2rem;
+        bottom: 4rem;
         left: 0;
         width: 100%;
       }
@@ -162,9 +169,9 @@
         margin-bottom: 1rem;
       }
       &__text {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: 400;
-        line-height: 1.2rem;
+        line-height: 1.5rem;
         color: var(--yellow);
         max-width: 100px;
         height: 50px;

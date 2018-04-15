@@ -10,12 +10,10 @@ export default function ({ isHMR, app, store, route, params, error, redirect }) 
   // Set locale
   store.commit('SET_LANG', locale);
   app.i18n.locale = store.state.locale;
-  // If route is /<defaultLocale>/... -> redirect to /...
-  if (locale === defaultLocale && route.fullPath.indexOf('/' + defaultLocale) === 0) {
-    const toReplace = '^/' + defaultLocale;
-    const re = new RegExp(toReplace);
+  // If route is / -> redirect to /<defaultLocale>...
+  if (locale === defaultLocale && route.fullPath.match(/^\/$/)) {
     return redirect(
-      route.fullPath.replace(re, '/')
+      route.fullPath = '/' + defaultLocale
     )
   }
 }

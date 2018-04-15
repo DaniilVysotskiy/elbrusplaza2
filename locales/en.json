@@ -2,7 +2,7 @@
 	"links": {
 		"hotel": "Hotel",
 		"rooms": "Rooms",
-		"feedback": "reviews",
+		"reviews": "reviews",
 		"contacts": "Contacts"
 	}
 }

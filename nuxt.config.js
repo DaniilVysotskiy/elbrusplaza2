@@ -21,11 +21,20 @@ module.exports = {
   ** Router
   */
   router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      if (to.hash) {
+        return {
+          selector: to.hash
+        }
+      }
+    },
     middleware: 'i18n'
   },
-  plugins: ['~/plugins/i18n.js'],
+  plugins: [
+    '~/plugins/i18n.js'
+  ],
   generate: {
-    routes: ['/', '/room', '/en', '/en/room']
+    // routes: ['/ru', '/ru/room', '/en', '/en/room']
   },
   /*
   ** Build configuration

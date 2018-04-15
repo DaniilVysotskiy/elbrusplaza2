@@ -8,16 +8,16 @@
         .nav__menu.menu
           ul.menu__list
             li.menu__item.menu-item
-              a.menu-item__link.menu-item__link--hotel(href="#hotel") {{ $t('links.hotel') }}
+              nuxt-link.menu-item__link.menu-item__link--hotel(to="#hotel" active-class="active") {{ $t('links.hotel') }}
             li.menu__item.menu-item
-              a.menu-item__link.menu-item__link--rooms(href="#rooms") {{ $t('links.rooms') }}
+              nuxt-link.menu-item__link.menu-item__link--rooms(to="#rooms" active-class="active") {{ $t('links.rooms') }}
             li.menu__item.menu-item
-              a.menu-item__link.menu-item__link--feedback(href="#feedback") {{ $t('links.feedback') }}
+              nuxt-link.menu-item__link.menu-item__link--reviews(to="#reviews" active-class="active") {{ $t('links.reviews') }}
             li.menu__item.menu-item
-              a.menu-item__link.menu-item__link--contacts(href="#contacts") {{ $t('links.contacts') }}
+              nuxt-link.menu-item__link.menu-item__link--contacts(to="#contacts" active-class="active") {{ $t('links.contacts') }}
           ul.menu__lang
             li.menu__lang-item
-              nuxt-link.menu__lang-button(to="/" active-class="active" exact @click="setLang('ru')") RU
+              nuxt-link.menu__lang-button(to="/ru" active-class="active" @click="setLang('ru')") RU
             li.menu__lang-item
               nuxt-link.menu__lang-button(to="/en" active-class="active" @click="setLang('en')") EN
 </template>
@@ -69,7 +69,6 @@ export default {
   },
   created: function() {
     this.currentLang = this.$store.state.locale;
-    console.log('created this.currentLang:', this.currentLang);
   },
   beforeMount () {
     window.addEventListener('scroll', throttle(this.handleScroll));
@@ -95,6 +94,7 @@ export default {
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
+      // padding: 0 20px;
     }
     &__menu {
       background-color: var(--red);
@@ -103,11 +103,11 @@ export default {
       background-position: right;
       background-size: contain;
       min-width: 520px;
-      height: 50px;
+      height: 52px;
     }
     &__logo {
-      min-width: 75px;
-      min-height: 75px;
+      min-width: 80px;
+      min-height: 80px;
     }
   }
   .menu {
@@ -191,7 +191,7 @@ export default {
       &--rooms {
         min-width: 78px;
       }
-      &--feedback {
+      &--reviews {
         min-width: 80px;
       }
       &--contacts {
