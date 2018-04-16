@@ -60,7 +60,7 @@ export default {
 
   .hotel {
     width: 100%;
-    height: 101vh;
+    height: 100vh;
     position: relative;
     background-image: url(~/assets/imgs/hotel-bg.jpg);
     background-size: cover;
@@ -177,10 +177,6 @@ export default {
         height: 50px;
       }
     }
-  }
-  .hatching-white {
-    background: repeating-linear-gradient(-30deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, white 3px, white 4px);
-    background-repeat: repeat;
   }
 
 </style>

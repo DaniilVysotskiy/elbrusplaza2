@@ -29,4 +29,10 @@ html {
 .min-height {
   min-height: 800px;
 }
+.hatching-white {
+  background: repeating-linear-gradient(-30deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, white 3px, white 4px);
+}
+.hatching-yellow {
+  background: repeating-linear-gradient(-30deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, var(--yellow) 3px, var(--yellow) 4px);
+}
 </style>
