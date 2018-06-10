@@ -1,2 +1,24 @@
 @import url('./_fonts.scss');
 @import url('./_theme.scss');
+
+.button {
+  color: var(--red);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--red);
+  text-decoration: none;
+  font-family: Selina;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 8px;
+}
+.button--orange-outline {
+  background-color: transparent;
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.button--white-outline {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}

@@ -8,13 +8,13 @@
               | Номера
               .hotel__title--decorative.hatching-yellow
             .rooms__info
-              .rooms__info-column
+              .my-column
                 p.rooms__text Номерной фонд отеля представлен номерами категории «Standart», «Panorama», «Luxe» и другими, расчитан на 110-120 мест.
-              .rooms__info-column
+              .my-column
                 p.rooms__text.rooms__text--icon.rooms__text--icon--building Каждый номер оснащен современной мебелью и оборудованием, спутниковым телевидением, на всей территории отеля доступен высокоскоростной интернет, имеется ресторан, караоке-бар, оздоровительный комплекс (сауна), фитнесс-центр, хранилище для снаряжения, вблизи расположен закрытый спортивный зал.
                 br
                 p.rooms__text.rooms__text--icon.rooms__text--icon--clerk Для корпоративных клиентов предусмотрены специальные предложения и система скидок.
-              .rooms__info-column
+              .my-column
                 form.rooms__schedule.schedule
                   h3.schedule__title Когда вы хотите нас посетить?
                   small.schedule__hint Проверьте наличие номеров на интересующие вас даты
@@ -23,12 +23,36 @@
                     input.schedule__date(type="date" placeholder="Дата выезда")
                   .schedule__group
                     button.schedule__reset(type="reset") Сбросить фильтр
-                    button.schedule__submit(type="submit") Применить
+                    button.button.button--white-outline.schedule__submit(type="submit") Применить
 
       .rooms__body
+        .container
+          .rooms__card.room-card
+            img.room-card__img.my-column(src="")
+            .room-card__info.my-column
+              .room-card__title Standart
+              ul.room-card__params.room-params
+                li.room-params__item.item
+                  .item__title Общая площадь
+                  .item__value
+                    | 40 м
+                    sup 2
+                li.room-params__item.item
+                  .item__title Число гостей
+                  .item__value
+                    font-awesome-icon(:icon="icon")
+                li.room-params__item.item
+                  .item__title Цена за ночь
+                  .item__value
+                    | {{ '5000' | currency('руб.', 0, { thousandsSeparator: ' ', symbolOnLeft: false, spaceBetweenAmountAndSymbol: true }) }}
+              .room-card__button
+                nuxt-link.button.button--orange-outline(to="/room") Подробнее
 </template>
 
 <script>
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import faMale from '@fortawesome/fontawesome-free-solid/faMale'
+
 export default {
   data () {
     return {
@@ -37,7 +61,16 @@ export default {
   },
   methods: {
 
+  },
+  computed: {
+    icon () {
+      return faMale
+    }
+  },
+  components: {
+    FontAwesomeIcon
   }
+
 }
 </script>
 
@@ -84,6 +117,10 @@ export default {
         padding-bottom: 3rem;
       }
     }
+    &__body {
+      width: 100%;
+      min-height: 600px;
+    }
     &__title {
       position: relative;
       display: inline-block;
@@ -108,9 +145,6 @@ export default {
       justify-content: flex-start;
       align-items: flex-start;
       margin-top: 2rem;
-    }
-    &__info-column {
-      flex: 1 1 33.33%;
     }
     &__text {
       position: relative;
@@ -143,6 +177,10 @@ export default {
           background-image: url('~/assets/icons/clerk.png');
         }
       }
+    }
+    .my-column {
+      flex: 1 1 33.33%;
+      max-width: 33.33%;
     }
     .schedule {
       position: relative;
@@ -181,7 +219,7 @@ export default {
         align-items: center;
         margin-bottom: 2rem;
       }
-      &__date {}
+      // &__date {}
       &__reset {
         border: 0;
         background-color: transparent;
@@ -192,15 +230,7 @@ export default {
         font-style: italic;
         font-weight: 400;
       }
-      &__submit {
-        border: 1px solid white;
-        background-color: transparent;
-        color: white;
-        font-family: Selina;
-        font-size: 1rem;
-        font-weight: 400;
-        padding: 8px;
-      }
+      // &__submit {}
     }
   }
 

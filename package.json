@@ -14,9 +14,13 @@
     "dev-debug": "node --inspect node_modules/.bin/nuxt"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/vue-fontawesome": "0.0.23",
     "nuxt": "^1.0.0",
     "vue-i18n": "^7.6.0",
-    "vue-observe-visibility": "^0.3.1"
+    "vue-observe-visibility": "^0.3.1",
+    "vue2-filters": "^0.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

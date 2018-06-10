@@ -31,7 +31,8 @@ module.exports = {
     middleware: 'i18n'
   },
   plugins: [
-    '~/plugins/i18n.js'
+    '~/plugins/i18n.js',
+    '~/plugins/vue2-filters.js'
   ],
   generate: {
     // routes: ['/ru', '/ru/room', '/en', '/en/room']
