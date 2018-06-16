@@ -18,6 +18,7 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@fortawesome/vue-fontawesome": "0.0.23",
     "nuxt": "^1.0.0",
+    "nuxt-sass-resources-loader": "^2.0.2",
     "vue-i18n": "^7.6.0",
     "vue-observe-visibility": "^0.3.1",
     "vue2-filters": "^0.3.0"

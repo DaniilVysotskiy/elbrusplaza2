@@ -1,0 +1,67 @@
+html {
+  font-family: "Selina", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+.min-height {
+  min-height: 800px;
+}
+.hatching-white {
+  background: repeating-linear-gradient(-30deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, white 3px, white 4px);
+}
+.hatching-yellow {
+  background: repeating-linear-gradient(-30deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, $yellow 3px, $yellow 4px);
+}
+
+.container {
+  flex: 1 1 100;
+  max-width: 1170px;
+  height: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  color: $red;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $red;
+  text-decoration: none;
+  font-family: Selina;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 8px;
+}
+.button--orange-outline {
+  background-color: transparent;
+  border-color: $orange;
+  color: $orange;
+}
+.button--white-outline {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+
+.my-column {
+  flex: 1 1 33.33%;
+  max-width: 33.33%;
+}

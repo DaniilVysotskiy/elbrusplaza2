@@ -13,6 +13,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css: [
+    // { src: '@/assets/styles/global.scss', lang: 'scss' }
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -37,6 +40,16 @@ module.exports = {
   generate: {
     // routes: ['/ru', '/ru/room', '/en', '/en/room']
   },
+  modules: [
+    // provide path to the file with resources
+    ['nuxt-sass-resources-loader', '@/assets/styles/main.scss'],
+
+    // or array of paths
+    // ['nuxt-sass-resources-loader', [
+    //     '@/path/to/first-resources.sass',
+    //     '@/path/to/second-resources.scss',
+    // ]],
+  ],
   /*
   ** Build configuration
   */

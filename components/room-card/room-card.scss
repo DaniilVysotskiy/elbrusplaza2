@@ -1,0 +1,59 @@
+.room-card {
+  display: flex;
+  flex-flow: row wrap;
+  &__img {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+    & img {
+      object-fit: cover;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: lightgray;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  &__title {
+    color: $orange;
+    font-family: 'Thames C';
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 27px;
+    text-transform: uppercase;
+    margin: 1em 0;
+  }
+  &__params {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  &__button {
+    align-self: flex-end;
+    // margin-top: auto;
+  }
+}
+.room-params {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  padding: 0;
+  & .item {
+    &__title {
+      margin-bottom: 1em;
+    }
+    &__value {
+      color: $red;
+      font-weight: 700;
+    }
+  }
+}
