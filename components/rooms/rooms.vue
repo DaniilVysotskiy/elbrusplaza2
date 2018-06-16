@@ -6,7 +6,7 @@
           .rooms__header--wrapper
             h2.rooms__title
               | Номера
-              .hotel__title--decorative.hatching-yellow
+              .decorative-element.hatching-yellow
             .rooms__info
               .my-column
                 p.rooms__text Номерной фонд отеля представлен номерами категории «Standart», «Panorama», «Luxe» и другими, расчитан на 110-120 мест.
@@ -26,7 +26,16 @@
                     button.button.button--white-outline.schedule__submit(type="submit") Применить
 
       .rooms__body
+        img.decorative-element-left(src="~/assets/imgs/rooms_decor_left.png")
+        img.decorative-element-right(src="~/assets/imgs/rooms_decor_right.png")
         .container
+          .decorative-element.hatching-orange
+          roomCard.rooms__card
+          roomCard.rooms__card
+          roomCard.rooms__card
+          roomCard.rooms__card
+          roomCard.rooms__card
+          roomCard.rooms__card
           roomCard.rooms__card
 </template>
 

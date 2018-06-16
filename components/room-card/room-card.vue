@@ -1,9 +1,9 @@
 <template lang="pug">
   .room-card
-    .room-card__img.my-column
+    .room-card__img
       img(src="")
-    .room-card__info.my-column
-      .room-card__title Standart
+    .room-card__info
+      .room-card__title.title--decor Standart
       ul.room-card__params.room-params
         li.room-params__item.item
           .item__title Общая площадь
