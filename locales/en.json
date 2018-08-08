@@ -1,8 +1,51 @@
 {
-	"links": {
-		"hotel": "Hotel",
-		"rooms": "Rooms",
-		"reviews": "reviews",
-		"contacts": "Contacts"
+	"LINKS": {
+		"HOTEL": "Hotel",
+		"ROOMS": "Rooms",
+		"REVIEWS": "reviews",
+		"CONTACTS": "Contacts"
+	},
+	"HERO": {
+		"HOTEL_NAME": "Hotel «Elbrus Plaza»",
+		"HOTEL_DESCRIPTION_1": "The new hotel complex «ELBRUS PLAZA» was built in 2018 and is located on the picturesque Baksan Valley, surrounded by a pine forest of the national park «Elbrus».",
+		"HOTEL_DESCRIPTION_2": "This is the ideal place from which to start your acquaintance with the slopes of Elbrus!"
+	},
+	"HOTEL": {
+		"TITLE": "About hotel",
+		"TEXT_1": "To our guests we provide a unique place for recreation, which will be equally for the training of professional athletes, for training, team building and other activities in the mountains at an altitude of 2000 meters.",
+		"TEXT_2": "The main place for sports parties and recreation on Elbrus - glades «Azau» and «Cheget» are next to the hotel.",
+		"TEXT_3": "In 2006, there was built a new gondola lift of the French firm POMA, it's going in parallel to the existing pendulum. To reach out the ski-run and cable car there is a regular shuttle service.",
+		"PROS": {
+			"TRANSFER": "Transfer",
+			"RESTAURANT": "Restaurant",
+			"SAUNA": "Sauna",
+			"GYM": "Gym",
+			"RENT": "Rent",
+			"BANQUETING_HALL": "Banqueting hall",
+			"PLAYGROUND": "Playground"
+		}
+	},
+	"ROOMS": {
+		"TITLE": "Rooms",
+		"TEXT_1": "The hotel offers rooms of the category «Standard», «Panorama», «Luxe» and others, designed for 110-120 guests.",
+		"TEXT_2": "Each room is equipped with modern furniture and equipment, satellite TV, high-speed internet is available throughout the hotel. There is a restaurant, a karaoke bar, a health center (sauna), a fitness center, a storage for equipment and a gym.",
+		"TEXT_3": "For corporate clients there are special offers and a system of discounts.",
+		"SCHEDULE_TITLE": "When would you like to visit us?",
+		"SCHEDULE_NOTICE": "Check rooms availability for the dates of your interest",
+		"SCHEDULE_CHECK_IN": "Check-in date",
+		"SCHEDULE_CHECK_OUT": "Check-out date",
+		"BUTTONS": {
+			"RESET_FILTER": "Reset filter",
+			"SUBMIT": "Submit",
+			"MORE": "More"
+		},
+		"ROOM_CARD": {
+			"NAME": "",
+			"AREA": "Area",
+			"AREA_UNIT": "m",
+			"GUESTS_NUMBER": "Guests number",
+			"COST_PER_NIGHT": "Cost per night",
+			"CURRENCY": "rub"
+		}
 	}
 }

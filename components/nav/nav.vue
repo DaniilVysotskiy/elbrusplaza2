@@ -8,13 +8,13 @@
         .nav__menu.menu
           ul.menu__list
             li.menu__item.menu-item
-              nuxt-link.menu-item__link.menu-item__link--hotel(to="#hotel" active-class="active") {{ $t('links.hotel') }}
+              nuxt-link.menu-item__link.menu-item__link--hotel(to="#hotel" active-class="active") {{ $t('LINKS.HOTEL') }}
             li.menu__item.menu-item
-              nuxt-link.menu-item__link.menu-item__link--rooms(to="#rooms" active-class="active") {{ $t('links.rooms') }}
+              nuxt-link.menu-item__link.menu-item__link--rooms(to="#rooms" active-class="active") {{ $t('LINKS.ROOMS') }}
             li.menu__item.menu-item
-              nuxt-link.menu-item__link.menu-item__link--reviews(to="#reviews" active-class="active") {{ $t('links.reviews') }}
+              nuxt-link.menu-item__link.menu-item__link--reviews(to="#reviews" active-class="active") {{ $t('LINKS.REVIEWS') }}
             li.menu__item.menu-item
-              nuxt-link.menu-item__link.menu-item__link--contacts(to="#contacts" active-class="active") {{ $t('links.contacts') }}
+              nuxt-link.menu-item__link.menu-item__link--contacts(to="#contacts" active-class="active") {{ $t('LINKS.CONTACTS') }}
           ul.menu__lang
             li.menu__lang-item
               nuxt-link.menu__lang-button(to="/ru" active-class="active" @click="setLang('ru')") RU
@@ -41,8 +41,7 @@ function throttle(actionFn) {
 export default {
   data () {
     return {
-      isTopOfPage: true,
-      currentLang: 'ru'
+      isTopOfPage: true
     }
   },
   methods: {
@@ -54,8 +53,7 @@ export default {
       }
     },
     setLang(lang) {
-      this.currentLang = lang;
-      this.$store.commit('SET_LANG', this.currentLang);
+      this.$store.commit('SET_LANG', lang);
     }
   },
   computed: {
@@ -66,9 +64,6 @@ export default {
         return smallLogo;
       }
     }
-  },
-  created: function() {
-    this.currentLang = this.$store.state.locale;
   },
   beforeMount () {
     window.addEventListener('scroll', throttle(this.handleScroll));

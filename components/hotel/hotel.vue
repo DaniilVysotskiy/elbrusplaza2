@@ -5,41 +5,41 @@
         .hotel__wrapper.min-height
           .hotel__about
             h2.hotel__title
-              | Об отеле
+              | {{ $t('HOTEL.TITLE') }}
               .hotel__title--decorative.hatching-white
             .hotel__info
               .hotel__column
                 p.hotel__text
-                  | Нашим гостям мы предоставляем уникальное место для отдыха, которое равно пойдет и для подготовки профессиональных спортсменов, для проведения тренировок, тимбилдингов и других мероприятий в горах на высоте 2000 метров.
+                  | {{ $t('HOTEL.TEXT_1') }}
                 p.hotel__text
-                  | Основное место спортивной тусовки и отдыха на Эльбрусе – поляны «Азау» и «Чегет» находятся в непосредственной близости от отеля.
+                  | {{ $t('HOTEL.TEXT_2') }}
               .hotel__column
                 p.hotel__text
-                  | В 2006 году здесь построили новую гондольную канатную дорогу французской фирмы POMA, идущую в параллель существующей маятниковой. Для проезда к лыжне и канатной дороге организован постоянный трансфер.
+                  | {{ $t('HOTEL.TEXT_3') }}
           .hotel__pros--wrapper
             .container
               ul.hotel__pros
                 li.hotel__pros__item
                   img.hotel__pros__img(src="~/assets/icons/transfer.png")
-                  span.hotel__pros__text Трансфер
+                  span.hotel__pros__text {{ $t('HOTEL.PROS.TRANSFER') }}
                 li.hotel__pros__item
                   img.hotel__pros__img(src="~/assets/icons/restaurant.png")
-                  span.hotel__pros__text Ресторан
+                  span.hotel__pros__text {{ $t('HOTEL.PROS.RESTAURANT') }}
                 li.hotel__pros__item
                   img.hotel__pros__img(src="~/assets/icons/sauna.png")
-                  span.hotel__pros__text Сауна
+                  span.hotel__pros__text {{ $t('HOTEL.PROS.SAUNA') }}
                 li.hotel__pros__item
                   img.hotel__pros__img(src="~/assets/icons/gym.png")
-                  span.hotel__pros__text Тренажерный зал
+                  span.hotel__pros__text {{ $t('HOTEL.PROS.GYM') }}
                 li.hotel__pros__item
                   img.hotel__pros__img(src="~/assets/icons/car.png")
-                  span.hotel__pros__text Прокат
+                  span.hotel__pros__text {{ $t('HOTEL.PROS.RENT') }}
                 li.hotel__pros__item
                   img.hotel__pros__img(src="~/assets/icons/hall.png")
-                  span.hotel__pros__text Банкетный зал
+                  span.hotel__pros__text {{ $t('HOTEL.PROS.BANQUETING_HALL') }}
                 li.hotel__pros__item
                   img.hotel__pros__img(src="~/assets/icons/playground.png")
-                  span.hotel__pros__text Детская площадка
+                  span.hotel__pros__text {{ $t('HOTEL.PROS.PLAYGROUND') }}
 </template>
 
 <script>

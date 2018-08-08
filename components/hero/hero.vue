@@ -4,11 +4,11 @@
       .hero__info
         .hero__info--bg
         .hero__info--wrapper
-          h1.hero__title Отель «Эльбрус Плаза»
+          h1.hero__title {{ $t('HERO.HOTEL_NAME') }}
           p.hero__text
-            | Новый гостиничный комплекс «ELBRUS PLAZA» построен в 2018 году и находится на живописной Баксанской долине, в окружении соснового бора национального парка «Приэльбрусье».
+            | {{ $t('HERO.HOTEL_DESCRIPTION_1') }}
             br
-            | Это идеальное место, с которого начнется ваше знакомство со склонами Эльбруса!
+            | {{ $t('HERO.HOTEL_DESCRIPTION_2') }}
 
 </template>
 

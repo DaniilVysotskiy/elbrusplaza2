@@ -5,25 +5,25 @@
         .container
           .rooms__header--wrapper
             h2.rooms__title
-              | Номера
+              | {{ $t('ROOMS.TITLE') }}
               .decorative-element.hatching-yellow
             .rooms__info
               .my-column
-                p.rooms__text Номерной фонд отеля представлен номерами категории «Standart», «Panorama», «Luxe» и другими, расчитан на 110-120 мест.
+                p.rooms__text {{ $t('ROOMS.TEXT_1') }}
               .my-column
-                p.rooms__text.rooms__text--icon.rooms__text--icon--building Каждый номер оснащен современной мебелью и оборудованием, спутниковым телевидением, на всей территории отеля доступен высокоскоростной интернет, имеется ресторан, караоке-бар, оздоровительный комплекс (сауна), фитнесс-центр, хранилище для снаряжения, вблизи расположен закрытый спортивный зал.
+                p.rooms__text.rooms__text--icon.rooms__text--icon--building {{ $t('ROOMS.TEXT_2') }}
                 br
-                p.rooms__text.rooms__text--icon.rooms__text--icon--clerk Для корпоративных клиентов предусмотрены специальные предложения и система скидок.
+                p.rooms__text.rooms__text--icon.rooms__text--icon--clerk {{ $t('ROOMS.TEXT_3') }}
               .my-column
                 form.rooms__schedule.schedule
-                  h3.schedule__title Когда вы хотите нас посетить?
-                  small.schedule__hint Проверьте наличие номеров на интересующие вас даты
+                  h3.schedule__title {{ $t('ROOMS.SCHEDULE_TITLE') }}
+                  small.schedule__hint {{ $t('ROOMS.SCHEDULE_NOTICE') }}
                   .schedule__group
-                    input.schedule__date(type="date" placeholder="Дата заезда")
-                    input.schedule__date(type="date" placeholder="Дата выезда")
+                    input.schedule__date(type="date" v-bind:placeholder="$t('ROOMS.SCHEDULE_CHECK_IN')")
+                    input.schedule__date(type="date" v-bind:placeholder="$t('ROOMS.SCHEDULE_CHECK_OUT')")
                   .schedule__group
-                    button.schedule__reset(type="reset") Сбросить фильтр
-                    button.button.button--white-outline.schedule__submit(type="submit") Применить
+                    button.schedule__reset(type="reset") {{ $t('ROOMS.BUTTONS.RESET_FILTER') }}
+                    button.button.button--white-outline.schedule__submit(type="submit") {{ $t('ROOMS.BUTTONS.SUBMIT') }}
 
       .rooms__body
         img.decorative-element-left(src="~/assets/imgs/rooms_decor_left.png")

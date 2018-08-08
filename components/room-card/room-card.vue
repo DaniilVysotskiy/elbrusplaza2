@@ -1,25 +1,26 @@
 <template lang="pug">
   .room-card
-    .room-card__img
+    nuxt-link.room-card__img(to="/room" tag="a")
       img(src="")
     .room-card__info
-      .room-card__title.title--decor Standart
+      nuxt-link.room-card__title.title--decor(to="/room") Standart
       ul.room-card__params.room-params
         li.room-params__item.item
-          .item__title Общая площадь
+          .item__title {{ $t('ROOMS.ROOM_CARD.AREA') }}
           .item__value
-            | 40 м
+            span 40
+            span {{ $t('ROOMS.ROOM_CARD.AREA_UNIT') }}
             sup 2
         li.room-params__item.item
-          .item__title Число гостей
+          .item__title {{ $t('ROOMS.ROOM_CARD.GUESTS_NUMBER') }}
           .item__value
             font-awesome-icon(:icon="icon")
         li.room-params__item.item
-          .item__title Цена за ночь
+          .item__title {{ $t('ROOMS.ROOM_CARD.COST_PER_NIGHT') }}
           .item__value
-            | {{ '5000' | currency('руб.', 0, { thousandsSeparator: ' ', symbolOnLeft: false, spaceBetweenAmountAndSymbol: true }) }}
+            | {{ '5000' | currency($t('ROOMS.ROOM_CARD.CURRENCY'), 0, { thousandsSeparator: ' ', symbolOnLeft: false, spaceBetweenAmountAndSymbol: true }) }}
       .room-card__button
-        nuxt-link.button.button--orange-outline(to="/room" tag="button") Подробнее
+        nuxt-link.button.button--orange-outline(to="/room" tag="button") {{ $t('ROOMS.BUTTONS.MORE') }}
 </template>
 
 <script>
