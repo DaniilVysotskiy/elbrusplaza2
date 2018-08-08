@@ -13,6 +13,7 @@ html {
 //   width: 100%;
 //   height: 100%;
 //   overflow: hidden;
+//   margin: 0;
 // }
 *, *:before, *:after {
   box-sizing: border-box;
@@ -57,16 +58,16 @@ html {
   font-size: 1rem;
   font-weight: 400;
   padding: 8px;
-}
-.button--orange-outline {
-  background-color: transparent;
-  border-color: $orange;
-  color: $orange;
-}
-.button--white-outline {
-  background-color: transparent;
-  border-color: white;
-  color: white;
+  &--orange-outline {
+    background-color: transparent;
+    border-color: $orange;
+    color: $orange;
+  }
+  &--white-outline {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+  }
 }
 
 .my-column {

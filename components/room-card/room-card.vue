@@ -23,8 +23,11 @@
 </template>
 
 <script>
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-import faMale from '@fortawesome/fontawesome-free-solid/faMale'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faMale } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faMale)
 
 export default {
   data () {
@@ -48,6 +51,6 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import './room-card.scss';
 </style>

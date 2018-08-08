@@ -14,7 +14,7 @@ module.exports = {
     ]
   },
   css: [
-    // { src: '@/assets/styles/global.scss', lang: 'scss' }
+    { src: '@/assets/styles/main.scss', lang: 'scss' }
   ],
   /*
   ** Customize the progress bar color
@@ -41,14 +41,12 @@ module.exports = {
     // routes: ['/ru', '/ru/room', '/en', '/en/room']
   },
   modules: [
-    // provide path to the file with resources
-    ['nuxt-sass-resources-loader', '@/assets/styles/main.scss'],
-
-    // or array of paths
-    // ['nuxt-sass-resources-loader', [
-    //     '@/path/to/first-resources.sass',
-    //     '@/path/to/second-resources.scss',
-    // ]],
+    // provide path to the file with variables and mixins
+    ['nuxt-sass-resources-loader', {
+      resources: [
+        '@/assets/styles/_variables.scss'
+      ]
+    }]
   ],
   /*
   ** Build configuration

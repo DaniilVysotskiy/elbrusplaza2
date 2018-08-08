@@ -3,7 +3,7 @@
     .reviews.min-height
 </template>
 
-<style lang="scss">
+<style lang="scss" >
 
 
   .reviews {

@@ -3,7 +3,7 @@
     .my-video.min-height
 </template>
 
-<style lang="scss">
+<style lang="scss" >
 
 
   .my-video {

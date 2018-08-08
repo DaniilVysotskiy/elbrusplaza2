@@ -12,6 +12,6 @@
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import './hero.scss';
 </style>

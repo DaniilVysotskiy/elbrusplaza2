@@ -3,7 +3,7 @@
     .my-footer.min-height
 </template>
 
-<style lang="scss">
+<style lang="scss" >
 
 
   .my-footer {
