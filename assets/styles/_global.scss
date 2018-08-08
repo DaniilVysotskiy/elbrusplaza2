@@ -49,6 +49,7 @@ html {
 }
 
 .button {
+  display: block;
   color: $red;
   border-width: 1px;
   border-style: solid;
@@ -56,8 +57,9 @@ html {
   text-decoration: none;
   font-family: Selina;
   font-size: 1rem;
+  line-height: 2rem;
   font-weight: 400;
-  padding: 8px;
+  padding: 0 10px 4px;
   &--orange-outline {
     background-color: transparent;
     border-color: $orange;

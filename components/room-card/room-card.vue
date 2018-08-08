@@ -19,7 +19,7 @@
           .item__value
             | {{ '5000' | currency('руб.', 0, { thousandsSeparator: ' ', symbolOnLeft: false, spaceBetweenAmountAndSymbol: true }) }}
       .room-card__button
-        nuxt-link.button.button--orange-outline(to="/room") Подробнее
+        nuxt-link.button.button--orange-outline(to="/room" tag="button") Подробнее
 </template>
 
 <script>
