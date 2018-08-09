@@ -5,7 +5,7 @@
 
 <style lang="scss" >
 
-
+  @import '../../assets/styles/_variables.scss';
   .reviews {
     width: 100%;
     height: 100vh;

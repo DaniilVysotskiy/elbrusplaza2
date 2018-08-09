@@ -41,12 +41,7 @@ module.exports = {
     // routes: ['/ru', '/ru/room', '/en', '/en/room']
   },
   modules: [
-    // provide path to the file with variables and mixins
-    ['nuxt-sass-resources-loader', {
-      resources: [
-        '@/assets/styles/_variables.scss'
-      ]
-    }]
+
   ],
   /*
   ** Build configuration
