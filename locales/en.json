@@ -41,7 +41,7 @@
 		},
 		"ROOM_CARD": {
 			"NAME": "",
-			"AREA": "Area",
+			"TOTAL_AREA": "Total area",
 			"AREA_UNIT": "m",
 			"GUESTS_NUMBER": "Guests number",
 			"COST_PER_NIGHT": "Cost per night",

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Standart",
+    "area": 40,
+    "guestsNumber": 2,
+    "costPerNight": 5000,
+    "previewImg": "",
+    "code": "standart"
+  },
+  {
+    "name": "Standart+",
+    "area": 40,
+    "guestsNumber": 2,
+    "costPerNight": 6000,
+    "previewImg": "",
+    "code": "standart-plus"
+  },
+  {
+    "name": "Panorama",
+    "area": 50,
+    "guestsNumber": 2,
+    "costPerNight": 7000,
+    "previewImg": "",
+    "code": "panorama"
+  },
+  {
+    "name": "Luxe 2-х комнатный",
+    "area": 50,
+    "guestsNumber": 2,
+    "costPerNight": 7000,
+    "previewImg": "",
+    "code": "luxe-2-rooms"
+  },
+  {
+    "name": "Grand Luxe",
+    "area": 80,
+    "guestsNumber": 3,
+    "costPerNight": 8500,
+    "previewImg": "",
+    "code": "grand-luxe"
+  },
+  {
+    "name": "Luxe 2-х двухуровневый",
+    "area": 80,
+    "guestsNumber": 4,
+    "costPerNight": 10000,
+    "previewImg": "",
+    "code": "luxe-2-floors"
+  },
+  {
+    "name": "Family",
+    "area": 100,
+    "guestsNumber": 4,
+    "costPerNight": 14000,
+    "previewImg": "",
+    "code": "family"
+  }
+]

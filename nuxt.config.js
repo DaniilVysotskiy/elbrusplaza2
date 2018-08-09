@@ -41,7 +41,7 @@ module.exports = {
     // routes: ['/ru', '/ru/room', '/en', '/en/room']
   },
   modules: [
-
+    '@nuxtjs/axios'
   ],
   /*
   ** Build configuration
@@ -61,5 +61,6 @@ module.exports = {
       }
     }
   },
+  vendor: ['axios']
 
 }

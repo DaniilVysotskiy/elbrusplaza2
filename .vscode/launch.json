@@ -13,14 +13,14 @@
         "run",
         "dev-debug"
       ],
-			"port": 5858,
+			"port": 3003,
 			"console": "integratedTerminal"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceRoot}/start"
+      "program": "${workspaceRoot}/server"
     },
     {
       "type": "node",

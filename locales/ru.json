@@ -41,7 +41,7 @@
 		},
 		"ROOM_CARD": {
 			"NAME": "",
-			"AREA": "Общая площадь",
+			"TOTAL_AREA": "Общая площадь",
 			"AREA_UNIT": "м",
 			"GUESTS_NUMBER": "Число гостей",
 			"COST_PER_NIGHT": "Цена за ночь",

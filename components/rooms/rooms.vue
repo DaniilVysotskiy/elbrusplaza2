@@ -30,23 +30,16 @@
         img.decorative-element-right(src="~/assets/imgs/rooms_decor_right.png")
         .container
           .decorative-element.hatching-orange
-          roomCard.rooms__card
-          roomCard.rooms__card
-          roomCard.rooms__card
-          roomCard.rooms__card
-          roomCard.rooms__card
-          roomCard.rooms__card
-          roomCard.rooms__card
+          roomCard.rooms__card(v-for="(room, index) in $store.state.roomsList" :key="index" :room="room")
 </template>
 
 <script>
-import roomCard from '~/components/room-card/room-card.vue'
+import roomCard from '~/components/room-card/room-card.vue';
+import axios from 'axios';
 
 export default {
-  data () {
-    return {
-
-    }
+  data() {
+    return {}
   },
   methods: {
 
@@ -56,6 +49,11 @@ export default {
   },
   components: {
     roomCard
+  },
+  created() {
+    this.$store.dispatch('fetchRooms').then(() => {
+      console.log('Rooms list loaded!');
+    });
   }
 
 }

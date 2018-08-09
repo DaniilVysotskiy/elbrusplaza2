@@ -1,7 +1,9 @@
-import express from 'express'
+const express = require('express')
+const db = require('../models')
 
 // Create express router
 const router = express.Router()
+
 
 // Transform req & res to have the same API as express
 // So we can use res.status() & res.json()
@@ -27,6 +29,13 @@ router.post('/login', (req, res) => {
 router.post('/logout', (req, res) => {
   delete req.session.authUser
   res.json({ ok: true })
+})
+
+// Add GET - /api/rooms
+router.get('/rooms', (req, res) => {
+  const roomsList = db.Rooms.find();
+  console.log(roomsList);
+  res.json(roomsList);
 })
 
 // Export the server middleware
