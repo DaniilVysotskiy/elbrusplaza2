@@ -32,8 +32,6 @@ const roomSchema = new mongoose.Schema({
   }
 });
 
-let Room;
-
 roomSchema.statics.initRoom = (Room) => {
   console.info("Start setting init rooms data...");
 

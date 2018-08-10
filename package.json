@@ -38,6 +38,7 @@
     "passport-local": "^1.0.0",
     "vue-i18n": "^7.6.0",
     "vue-observe-visibility": "^0.3.1",
+    "vue2-datepicker": "^2.4.0",
     "vue2-filters": "^0.3.0",
     "whatwg-fetch": "^2.0.4"
   },

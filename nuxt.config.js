@@ -35,7 +35,8 @@ module.exports = {
   },
   plugins: [
     '~/plugins/i18n.js',
-    '~/plugins/vue2-filters.js'
+    '~/plugins/vue2-filters.js',
+    { src: '~plugins/vue2-datepicker', ssr: false }
   ],
   generate: {
     // routes: ['/ru', '/ru/room', '/en', '/en/room']
@@ -59,8 +60,11 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
-  },
-  vendor: ['axios']
+    },
+    vendor: [
+      'axios',
+      'vue2-datepicker'
+    ]
+  }
 
 }

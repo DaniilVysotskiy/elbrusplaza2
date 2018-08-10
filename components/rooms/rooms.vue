@@ -19,8 +19,8 @@
                   h3.schedule__title {{ $t('ROOMS.SCHEDULE_TITLE') }}
                   small.schedule__hint {{ $t('ROOMS.SCHEDULE_NOTICE') }}
                   .schedule__group
-                    input.schedule__date(type="date" v-bind:placeholder="$t('ROOMS.SCHEDULE_CHECK_IN')")
-                    input.schedule__date(type="date" v-bind:placeholder="$t('ROOMS.SCHEDULE_CHECK_OUT')")
+                    no-ssr
+                      date-picker(v-model="scheduleTime" range :shortcuts="shortcuts")
                   .schedule__group
                     button.schedule__reset(type="reset") {{ $t('ROOMS.BUTTONS.RESET_FILTER') }}
                     button.button.button--white-outline.schedule__submit(type="submit") {{ $t('ROOMS.BUTTONS.SUBMIT') }}
@@ -34,12 +34,22 @@
 </template>
 
 <script>
-import roomCard from '~/components/room-card/room-card.vue';
 import axios from 'axios';
+import roomCard from '~/components/room-card/room-card.vue';
 
 export default {
   data() {
-    return {}
+    return {
+      scheduleTime: '',
+      shortcuts: [
+        {
+          text: 'Today',
+          onClick: () => {
+            this.scheduleTime = [ new Date(), new Date() ];
+          }
+        }
+      ],
+    }
   },
   methods: {
 
@@ -51,9 +61,7 @@ export default {
     roomCard
   },
   created() {
-    this.$store.dispatch('fetchRooms').then(() => {
-      console.log('Rooms list loaded!');
-    });
+    this.$store.dispatch('fetchRooms');
   }
 
 }
