@@ -1,7 +1,7 @@
 <template lang="pug">
   .room-card
     nuxt-link.room-card__img(:to="'/' + $store.state.locale + '/' + room.code" tag="a")
-      img(src="")
+      img(:src="'/imgs/rooms/' + room.code + '.jpg'")
     .room-card__info
       nuxt-link.room-card__title.title--decor(:to="'/' + $store.state.locale + '/' + room.code") {{ room.name }}
       ul.room-card__params.room-params
