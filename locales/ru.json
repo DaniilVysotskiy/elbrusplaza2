@@ -34,6 +34,7 @@
 		"SCHEDULE_NOTICE": "Проверьте наличие номеров на интересующие вас даты",
 		"SCHEDULE_CHECK_IN": "Дата заезда",
 		"SCHEDULE_CHECK_OUT": "Дата выезда",
+		"SCHEDULE_SELECT_DATES": "Выберите даты",
 		"BUTTONS": {
 			"RESET_FILTER": "Сбросить фильтр",
 			"SUBMIT": "Применить",

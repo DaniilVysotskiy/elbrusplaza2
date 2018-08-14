@@ -20,10 +20,10 @@
                   small.schedule__hint {{ $t('ROOMS.SCHEDULE_NOTICE') }}
                   .schedule__group
                     no-ssr
-                      date-picker(v-model="scheduleTime" range :shortcuts="shortcuts")
+                      date-picker(v-model="scheduleTime" range :placeholder="$t('ROOMS.SCHEDULE_SELECT_DATES')" :lang="currLang" :not-before="notBefore" disabled)
                   .schedule__group
-                    button.schedule__reset(type="reset") {{ $t('ROOMS.BUTTONS.RESET_FILTER') }}
-                    button.button.button--white-outline.schedule__submit(type="submit") {{ $t('ROOMS.BUTTONS.SUBMIT') }}
+                    button.schedule__reset(type="reset" disabled) {{ $t('ROOMS.BUTTONS.RESET_FILTER') }}
+                    button.button.button--white-outline.schedule__submit(type="submit" disabled) {{ $t('ROOMS.BUTTONS.SUBMIT') }}
 
       .rooms__body
         img.decorative-element-left(src="~/assets/imgs/rooms_decor_left.png")
@@ -41,14 +41,8 @@ export default {
   data() {
     return {
       scheduleTime: '',
-      shortcuts: [
-        {
-          text: 'Today',
-          onClick: () => {
-            this.scheduleTime = [ new Date(), new Date() ];
-          }
-        }
-      ],
+      currLang: this.$store.state.locale,
+      notBefore: new Date()
     }
   },
   methods: {

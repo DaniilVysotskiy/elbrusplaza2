@@ -1,6 +1,6 @@
 [
   {
-    "name": "Standart",
+    "name": { "ru":"Standart", "en": "Standart"},
     "area": 40,
     "guestsNumber": 2,
     "costPerNight": 5000,
@@ -8,7 +8,7 @@
     "code": "standart"
   },
   {
-    "name": "Standart+",
+    "name": { "ru":"Standart+", "en": "Standart+"},
     "area": 40,
     "guestsNumber": 2,
     "costPerNight": 6000,
@@ -16,7 +16,7 @@
     "code": "standart-plus"
   },
   {
-    "name": "Panorama",
+    "name": { "ru":"Panorama", "en": "Panorama"},
     "area": 50,
     "guestsNumber": 2,
     "costPerNight": 7000,
@@ -24,7 +24,7 @@
     "code": "panorama"
   },
   {
-    "name": "Luxe 2-х комнатный",
+    "name": { "ru":"Luxe 2-х комнатный", "en": "Luxe 2 rooms"},
     "area": 50,
     "guestsNumber": 2,
     "costPerNight": 7000,
@@ -32,7 +32,7 @@
     "code": "luxe-2-rooms"
   },
   {
-    "name": "Grand Luxe",
+    "name": { "ru":"Grand Luxe", "en": "Grand Luxe"},
     "area": 80,
     "guestsNumber": 3,
     "costPerNight": 8500,
@@ -40,7 +40,7 @@
     "code": "grand-luxe"
   },
   {
-    "name": "Luxe 2-х двухуровневый",
+    "name": { "ru":"Luxe 2-х двухуровневый", "en": "Luxe 2 floors"},
     "area": 80,
     "guestsNumber": 4,
     "costPerNight": 10000,
@@ -48,7 +48,7 @@
     "code": "luxe-2-floors"
   },
   {
-    "name": "Family",
+    "name": { "ru":"Family", "en": "Family"},
     "area": 100,
     "guestsNumber": 4,
     "costPerNight": 14000,

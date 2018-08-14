@@ -36,7 +36,7 @@ module.exports = {
   plugins: [
     '~/plugins/i18n.js',
     '~/plugins/vue2-filters.js',
-    { src: '~plugins/vue2-datepicker', ssr: false }
+    { src: '~/plugins/vue2-datepicker.js', ssr: false }
   ],
   generate: {
     // routes: ['/ru', '/ru/room', '/en', '/en/room']

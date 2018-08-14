@@ -3,10 +3,8 @@ const rooms = require('../migrations/rooms.json');
 
 const roomSchema = new mongoose.Schema({
   name: {
-    type: String,
-    required: [true, "nameRequired"],
-    maxlength: [128, "tooLong"],
-    unique: true
+    type: Object,
+    required: [true, "nameRequired"]
   },
   area: {
     type: Number,

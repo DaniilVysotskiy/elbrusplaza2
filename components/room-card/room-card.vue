@@ -3,7 +3,7 @@
     nuxt-link.room-card__img(:to="'/' + $store.state.locale + '/' + room.code" tag="a")
       img(:src="'/imgs/rooms/' + room.code + '.jpg'")
     .room-card__info
-      nuxt-link.room-card__title.title--decor(:to="'/' + $store.state.locale + '/' + room.code") {{ room.name }}
+      nuxt-link.room-card__title.title--decor(:to="'/' + $store.state.locale + '/' + room.code") {{ room.name[currLang] }}
       ul.room-card__params.room-params
         li.room-params__item.item
           .item__title {{ $t('ROOMS.ROOM_CARD.TOTAL_AREA') }}
@@ -34,7 +34,7 @@ export default {
   props: ['room'],
   data () {
     return {
-
+      currLang: this.$store.state.locale
     }
   },
   methods: {
