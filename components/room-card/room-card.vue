@@ -1,9 +1,9 @@
 <template lang="pug">
   .room-card
-    nuxt-link.room-card__img(:to="'/' + $store.state.locale + '/' + room.code" tag="a")
+    .room-card__img(:to="'/' + $store.state.locale + '/' + room.code")
       img(:src="'/imgs/rooms/' + room.code + '.jpg'")
     .room-card__info
-      nuxt-link.room-card__title.title--decor(:to="'/' + $store.state.locale + '/' + room.code") {{ room.name[currLang] }}
+      .room-card__title.title--decor(:to="'/' + $store.state.locale + '/' + room.code") {{ room.name[currLang] }}
       ul.room-card__params.room-params
         li.room-params__item.item
           .item__title {{ $t('ROOMS.ROOM_CARD.TOTAL_AREA') }}
@@ -20,7 +20,7 @@
           .item__value
             | {{ room.costPerNight | currency($t('ROOMS.ROOM_CARD.CURRENCY'), 0, { thousandsSeparator: ' ', symbolOnLeft: false, spaceBetweenAmountAndSymbol: true }) }}
       .room-card__button
-        nuxt-link.button.button--orange-outline(:to="'/' + $store.state.locale + '/' + room.code" tag="button") {{ $t('ROOMS.BUTTONS.MORE') }}
+        nuxt-link.button.button--orange-outline(:to="'/' + $store.state.locale + '/' + room.code" tag="button" disabled) {{ $t('ROOMS.BUTTONS.MORE') }}
 </template>
 
 <script>
