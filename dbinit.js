@@ -7,11 +7,7 @@ const { Room } = require('./models');
 mongoose.Promise = require('bluebird');
 
 // Connect to MongoDB
-mongoose.connect("mongodb://localhost/elbrusplaza",{
-    server:{
-        poolSize: 10 // connections limit in pool
-    }
-});
+mongoose.connect("mongodb://localhost:27017/elbrusplaza", { useNewUrlParser: true });
 
 // Error handler
 mongoose.connection.on('error', (err) => {
