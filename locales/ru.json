@@ -48,5 +48,9 @@
 			"COST_PER_NIGHT": "Цена за ночь",
 			"CURRENCY": "руб."
 		}
+	},
+	"REVIEWS": {
+		"TITLE": "Отзывы",
+		"LEAVE_FEEDBACK": "Оставить отзыв"
 	}
 }
