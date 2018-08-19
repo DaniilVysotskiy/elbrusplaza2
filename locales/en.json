@@ -48,5 +48,9 @@
 			"COST_PER_NIGHT": "Cost per night",
 			"CURRENCY": "rub"
 		}
+	},
+	"REVIEWS": {
+		"TITLE": "Reviews",
+		"LEAVE_FEEDBACK": "Leave feedback"
 	}
 }
