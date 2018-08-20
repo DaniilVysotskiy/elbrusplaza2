@@ -4,7 +4,7 @@
     hero
     hotel
     rooms
-    reviews
+    //- reviews
     myVideo
     contacts
     myFooter
@@ -26,7 +26,7 @@ export default {
     hero,
     hotel,
     rooms,
-    reviews,
+    // reviews,
     myVideo,
     contacts,
     myFooter
