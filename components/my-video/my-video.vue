@@ -1,15 +1,34 @@
 <template lang="pug">
   section.section#my-video
     .my-video.min-height
+      no-ssr
+        youtube(:video-id="videoId" player-width="100%" player-height="100%" :player-vars="{start: 0, autoplay: 1, showInfo: false}", mute="true")
 </template>
+
+<script>
+import Vue from 'vue';
+import VueYouTubeEmbed from 'vue-youtube-embed';
+
+Vue.use(VueYouTubeEmbed);
+
+export default {
+  data () {
+    return {
+      videoId: 's7VbsrwQytc'
+    }
+  },
+  methods: {
+
+  },
+  components: {
+
+  }
+}
+</script>
 
 <style lang="scss" >
 
   @import '../../assets/styles/_variables.scss';
-  .my-video {
-    width: 100%;
-    height: 100vh;
-    background-color: $yellow;
-  }
+  @import './my-video.scss';
 
 </style>

@@ -1,0 +1,11 @@
+.my-video {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100%;
+  height: 100vh;
+  background-color: $orange;
+  & > div {
+    flex: 1;
+  }
+}
