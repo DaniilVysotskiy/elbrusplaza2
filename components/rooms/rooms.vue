@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 import roomCard from '~/components/room-card/room-card.vue';
 
 export default {
@@ -62,6 +62,5 @@ export default {
 </script>
 
 <style lang="scss" >
-  
   @import './rooms.scss';
 </style>

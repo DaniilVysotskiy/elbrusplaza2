@@ -32,17 +32,20 @@
     "i": "^0.3.6",
     "mongoose": "^5.2.9",
     "mongoose-unique-validator": "^2.0.1",
+    "nodemailer": "^4.6.8",
     "npm": "^6.4.0",
     "nuxt": "^1.4.2",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "validator": "^10.6.0",
     "vue-i18n": "^7.8.1",
     "vue-observe-visibility": "^0.3.1",
     "vue-youtube-embed": "^2.2.1",
     "vue2-datepicker": "^2.4.0",
     "vue2-filters": "^0.3.0",
     "vue2-google-maps": "^0.10.2",
-    "whatwg-fetch": "^2.0.4"
+    "whatwg-fetch": "^2.0.4",
+    "xss-filters": "^1.2.7"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

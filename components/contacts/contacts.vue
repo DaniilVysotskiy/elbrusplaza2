@@ -34,19 +34,20 @@
                 p.feedback__text
                   font-awesome-icon.icon.icon--white(:icon="icons.faComment")
                   | {{ $t('CONTACTS.FEEDBACK_FORM') }}
-                form.feedback__form.form
+                form.feedback__form.form(@submit.prevent="sendFeedback")
                   .form__row
                     .form__group
-                      input(name="name" :placeholder="$t('CONTACTS.FORM.NAME')")
-                      input(name="email" :placeholder="$t('CONTACTS.FORM.EMAIL')")
+                      input(v-model="name" name="name" :placeholder="$t('CONTACTS.FORM.NAME')")
+                      input(v-model="email" name="email" :placeholder="$t('CONTACTS.FORM.EMAIL')")
                   .form__row
-                    textarea(rows="5" :placeholder="$t('CONTACTS.FORM.QUESTION')")
+                    textarea(v-model="msg" rows="5" :placeholder="$t('CONTACTS.FORM.QUESTION')")
                   .form__row
                     div
                       button.button.button--white-outline.form__submit(type="submit") {{ $t('CONTACTS.FORM.SUBMIT') }}
 </template>
 
 <script>
+import axios from 'axios';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMapMarkerAlt, faPhone, faEnvelope, faMapMarkedAlt, faComment } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -54,6 +55,22 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(faMapMarkerAlt)
 
 export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      msg: ''
+    }
+  },
+  methods: {
+    sendFeedback() {
+      axios.post('/api/feedback', {
+        name: this.name,
+        email: this.email,
+        msg: this.msg
+      })
+    }
+  },
   computed: {
     icons() {
       return {

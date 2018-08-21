@@ -1,5 +1,11 @@
 module.exports = {
   /*
+  ** Server middleware
+  */
+  // serverMiddleware: [
+  //   { path: '/api/feedback', handler: '~/api/index.js' }
+  // ],
+  /*
   ** Headers of the page
   */
   head: {
