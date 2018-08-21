@@ -1,6 +1,7 @@
 <template lang="pug">
   section.section#reviews
     .reviews
+      .reviews__bg
       .reviews__wrapper
         .container
           .reviews__content

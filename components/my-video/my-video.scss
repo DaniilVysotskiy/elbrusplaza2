@@ -7,5 +7,21 @@
   background-color: $orange;
   & > div {
     flex: 1;
+    z-index: 1;
+    &::before {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:  100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      content: '<video>';
+      font-size: 2rem;
+      color: white;
+      font-family: monospace;
+      z-index: -1;
+    }
   }
 }

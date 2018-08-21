@@ -1,16 +1,25 @@
 .reviews {
   position: relative;
-  background-image: url(~/assets/imgs/reviews_bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
-  height: 0;
-  padding-top: 58.56%;
-  margin-top: -8.6%;
-  z-index: 0;
-  &__wrapper {
+  height: 100%;
+  flex: 1;
+  &__bg {
     position: absolute;
+    background-image: url(~/assets/imgs/reviews_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    padding-top: 62%;
+    margin-top: -9%;
+    z-index: -1;
+  }
+  &__wrapper {
+    position: relative;
+    display: flex;
     top: 0;
     left: 0;
     width: 100%;
@@ -18,7 +27,7 @@
     z-index: 1;
   }
   &__content {
-    margin-top: 13%;
+    padding-top: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -2,7 +2,7 @@
   section.section#my-video
     .my-video.min-height
       no-ssr
-        youtube(:video-id="videoId" player-width="100%" player-height="100%" :player-vars="{start: 0, autoplay: 1, showInfo: false}", mute="true")
+        youtube(:video-id="videoId" player-width="100%" player-height="100%" :player-vars="{start: 0, autoplay: 0, showInfo: false}")
 </template>
 
 <script>
