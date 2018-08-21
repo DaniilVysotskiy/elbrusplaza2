@@ -36,6 +36,7 @@ module.exports = {
   plugins: [
     '~/plugins/i18n.js',
     '~/plugins/vue2-filters.js',
+    { src: '~/plugins/vue2-youtube.js', ssr: false },
     { src: '~/plugins/vue2-datepicker.js', ssr: false }
   ],
   generate: {
@@ -63,8 +64,15 @@ module.exports = {
     },
     vendor: [
       'axios',
-      'vue2-datepicker'
-    ]
+      'vue2-datepicker',
+      'vue-youtube-embed'
+    ],
+    transpile: [
+      'vue-youtube-embed'
+    ],
+    styleResources: {
+      scss: './assets/styles/_variables.scss'
+    }
   }
 
 }

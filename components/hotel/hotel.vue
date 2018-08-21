@@ -56,6 +56,6 @@ export default {
 </script>
 
 <style lang="scss" >
-  @import '../../assets/styles/_variables.scss';
+  
   @import './hotel.scss';
 </style>

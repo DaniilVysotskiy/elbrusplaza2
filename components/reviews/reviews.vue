@@ -49,6 +49,6 @@
 </template>
 
 <style lang="scss" >
-  @import '../../assets/styles/_variables.scss';
+  
   @import './reviews.scss';
 </style>

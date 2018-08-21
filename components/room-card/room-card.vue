@@ -54,6 +54,6 @@ export default {
 
 
 <style lang="scss">
-  @import '../../assets/styles/_variables.scss';
+  
   @import './room-card.scss';
 </style>

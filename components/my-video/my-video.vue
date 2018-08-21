@@ -7,7 +7,7 @@
 
 <script>
 import Vue from 'vue';
-import VueYouTubeEmbed from 'vue-youtube-embed';
+import VueYouTubeEmbed from '../../node_modules/vue-youtube-embed/lib/vue-youtube-embed';
 
 Vue.use(VueYouTubeEmbed);
 
@@ -28,7 +28,6 @@ export default {
 
 <style lang="scss" >
 
-  @import '../../assets/styles/_variables.scss';
   @import './my-video.scss';
 
 </style>
