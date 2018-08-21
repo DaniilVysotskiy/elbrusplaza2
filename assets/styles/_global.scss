@@ -31,8 +31,12 @@ html {
 .hatching-orange {
   background: repeating-linear-gradient(-30deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, $orange 3px, $orange 4px);
 }
+.hatching-red {
+  background: repeating-linear-gradient(-30deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, $red 3px, $red 4px);
+}
 
 .container {
+  position: relative;
   flex: 1 1 100%;
   max-width: 1170px;
   width: 100%;

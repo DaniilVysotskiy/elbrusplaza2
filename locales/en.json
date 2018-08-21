@@ -39,7 +39,8 @@
 		"BUTTONS": {
 			"RESET_FILTER": "Reset filter",
 			"SUBMIT": "Submit",
-			"MORE": "More"
+			"MORE": "More",
+			"BOOK": "Book"
 		},
 		"ROOM_CARD": {
 			"NAME": "",
@@ -53,5 +54,18 @@
 	"REVIEWS": {
 		"TITLE": "Reviews",
 		"LEAVE_FEEDBACK": "Leave feedback"
+	},
+	"CONTACTS": {
+		"TITLE": "Contacts",
+		"ADDRESS": "Kabardino-Balkarian Republic, Elbrus district, Elbrus village, Balkarskaya street, 36а",
+		"YANDEX_MAPS": "Yandex.Maps",
+		"GOOGLE_MAPS": "Google Maps",
+		"FEEDBACK_FORM": "Feedback form",
+		"FORM": {
+			"NAME": "Name",
+			"EMAIL": "Email",
+			"QUESTION": "Question",
+			"SUBMIT": "Submit"
+		}
 	}
 }

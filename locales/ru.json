@@ -39,7 +39,8 @@
 		"BUTTONS": {
 			"RESET_FILTER": "Сбросить фильтр",
 			"SUBMIT": "Применить",
-			"MORE": "Подробнее"
+			"MORE": "Подробнее",
+			"BOOK": "Забронировать"
 		},
 		"ROOM_CARD": {
 			"NAME": "",
@@ -53,5 +54,18 @@
 	"REVIEWS": {
 		"TITLE": "Отзывы",
 		"LEAVE_FEEDBACK": "Оставить отзыв"
+	},
+	"CONTACTS": {
+		"TITLE": "Контакты",
+		"ADDRESS": "Кабардино-Балкарская Республика, Эльбрусский район, с. Эльбрус, ул. Балкарская, 36а",
+		"YANDEX_MAPS": "Яндекс.Карты",
+		"GOOGLE_MAPS": "Google Maps",
+		"FEEDBACK_FORM": "Форма обратной связи",
+		"FORM": {
+			"NAME": "Имя",
+			"EMAIL": "Email",
+			"QUESTION": "Вопрос",
+			"SUBMIT": "Отправить"
+		}
 	}
 }

@@ -36,6 +36,7 @@ module.exports = {
   plugins: [
     '~/plugins/i18n.js',
     '~/plugins/vue2-filters.js',
+    '~/plugins/vue2-google-maps.js',
     { src: '~/plugins/vue2-youtube.js', ssr: false },
     { src: '~/plugins/vue2-datepicker.js', ssr: false }
   ],
@@ -60,12 +61,25 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-      }
+      };
+
+      if (!isClient) {
+        // This instructs Webpack to include `vue2-google-maps`'s Vue files
+        // for server-side rendering
+        config.externals.splice(0, 0, function (context, request, callback) {
+          if (/^vue2-google-maps($|\/)/.test(request)) {
+            callback(null, false)
+          } else {
+            callback()
+          }
+        })
+      };
     },
     vendor: [
       'axios',
       'vue2-datepicker',
-      'vue-youtube-embed'
+      'vue-youtube-embed',
+      'vue2-google-maps'
     ],
     transpile: [
       'vue-youtube-embed'
