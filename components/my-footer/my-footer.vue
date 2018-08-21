@@ -1,16 +1,10 @@
 <template lang="pug">
-  section.section#my-footer
-    .my-footer.min-height
-      <p><nuxt-link to="/ru/login">Login</nuxt-link></p>
+  section#my-footer
+    .my-footer
 </template>
 
 <style lang="scss" >
 
-  
-  .my-footer {
-    width: 100%;
-    height: 100vh;
-    background-color: $yellow;
-  }
+  @import './my-footer.scss';
 
 </style>

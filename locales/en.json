@@ -2,7 +2,8 @@
 	"LINKS": {
 		"HOTEL": "Hotel",
 		"ROOMS": "Rooms",
-		"REVIEWS": "reviews",
+		"REVIEWS": "Reviews",
+		"VIDEO": "Video",
 		"CONTACTS": "Contacts"
 	},
 	"HERO": {

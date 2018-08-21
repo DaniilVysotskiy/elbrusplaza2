@@ -14,6 +14,8 @@
             li.menu__item.menu-item
               nuxt-link.menu-item__link.menu-item__link--reviews(to="#reviews" active-class="active") {{ $t('LINKS.REVIEWS') }}
             li.menu__item.menu-item
+              nuxt-link.menu-item__link.menu-item__link--video(to="#my-video" active-class="active") {{ $t('LINKS.VIDEO') }}
+            li.menu__item.menu-item
               nuxt-link.menu-item__link.menu-item__link--contacts(to="#contacts" active-class="active") {{ $t('LINKS.CONTACTS') }}
           ul.menu__lang
             li.menu__lang-item

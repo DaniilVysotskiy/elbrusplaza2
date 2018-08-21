@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
-    min-width: 520px;
+    min-width: 640px;
     height: 52px;
   }
   &__logo {
@@ -109,6 +109,9 @@
     }
     &--reviews {
       min-width: 80px;
+    }
+    &--video {
+      min-width: 65px;
     }
     &--contacts {
       min-width: 110px;
