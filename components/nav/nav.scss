@@ -118,3 +118,41 @@
     }
   }
 }
+
+/* Extra Large Devices, Wide Screens */
+@media only screen and (max-width : 1600px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+} 
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .nav__menu {
+    width: auto;
+    min-width: initial;
+  }
+  .menu {
+    &__list {
+      display: none;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

@@ -1,6 +1,6 @@
 .hotel {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-image: url(~/assets/imgs/hotel-bg.jpg);
   background-size: cover;
@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 1;
   }
   &__about {
@@ -117,4 +117,62 @@
       height: 50px;
     }
   }
+}
+
+/* Extra Large Devices, Wide Screens */
+@media only screen and (max-width : 1600px) {
+	
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .hotel {
+    &__about {
+      margin-top: 4rem;
+    }
+   	&__pros {
+   	  justify-content: center;
+   		&--wrapper {
+   		  margin: 4rem 0;
+   			position: relative;
+   			bottom: initial;
+   		}
+   	}
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .hotel {
+    &__about {
+      align-items: stretch;
+    }
+    &__info {
+      flex-direction: column;
+      &::after {
+        content: none;
+      }
+    }
+    &__column {
+      max-width: initial;
+      & + & {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }
