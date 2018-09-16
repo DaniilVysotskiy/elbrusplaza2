@@ -33,6 +33,10 @@ const sendMail = (name, email, msg) => {
     to: 'info@elbrusplaza.com',
     subject: `Новое обращение через форму обратной связи от ${name}`,
     text: msg
+  }).then(result => {
+    console.log(result);
+  }).catch(error => {
+    console.log('ERROR:' + error);
   });
 };
 
@@ -108,5 +112,5 @@ if (!isProd) {
 }
 
 app.use(nuxt.render);
-app.listen(8080);
-console.log('Server is listening on http://localhost:8080');
+app.listen(80);
+console.log('Server is listening on localhost:80');

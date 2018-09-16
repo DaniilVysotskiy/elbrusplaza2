@@ -19,8 +19,8 @@
           .item__title {{ $t('ROOMS.ROOM_CARD.COST_PER_NIGHT') }}
           .item__value
             | {{ room.costPerNight | currency($t('ROOMS.ROOM_CARD.CURRENCY'), 0, { thousandsSeparator: ' ', symbolOnLeft: false, spaceBetweenAmountAndSymbol: true }) }}
-      .room-card__button
-        nuxt-link.button.button--orange-outline(:to="'/' + $store.state.locale + '#contacts'" tag="button") {{ $t('ROOMS.BUTTONS.BOOK') }}
+      //- .room-card__button
+      //-   nuxt-link.button.button--orange-outline(:to="'/' + $store.state.locale + '#contacts'" tag="button") {{ $t('ROOMS.BUTTONS.BOOK') }}
 </template>
 
 <script>
