@@ -67,5 +67,8 @@
 			"QUESTION": "Question",
 			"SUBMIT": "Submit"
 		}
-	}
+	},
+	"HOME_PAGE": "Home page",
+	"PAGE_NOT_FOUND": "Page not found",
+	"ERROR_OCCURED": "A error occured"
 }
