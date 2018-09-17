@@ -79,6 +79,17 @@
       color: white;
     }
   }
+  &__button {
+    background: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    &--open {
+    }
+    &--close {
+    }
+  }
 }
 .menu-item {
   margin: 0 15px;
@@ -139,11 +150,74 @@
   .nav__menu {
     width: auto;
     min-width: initial;
+    background-image: none;
   }
   .menu {
-    &__list {
-      display: none;
+    flex-direction: column;
+    justify-content: center;
+    &__buttons {
+      z-index: 10;
     }
+    &__button {
+      &--close {
+        display: none;
+      }
+    }
+    &__list {
+      flex-direction: column;
+      height: auto;
+    }
+    &__lang {
+      border-top: 1px dashed $yellow;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      flex-direction: row;
+      &-button {
+        font-size: 1.5rem;
+      }
+    }
+    &-item {
+      &__link {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  #menu {
+    &:target {
+      & .menu-toggle {
+        display: flex;
+      }
+      & .menu__button--open {
+        display: none;
+      }
+      & .menu__button--close {
+        display: block;
+      }
+    }
+    &:not(:target) {
+      & .menu-toggle {
+        display: none;
+      }
+      & .menu__button--open {
+        display: block;
+      }
+      & .menu__button--close {
+        display: none;
+      }
+    }
+  }
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    padding: 2rem;
+    padding-top: 3.1rem;
+    background-color: $red;
   }
 }
 
