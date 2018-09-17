@@ -27,11 +27,6 @@
   }
 }
 .menu {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
   &__list {
     display: flex;
     flex-flow: row nowrap;
@@ -78,6 +73,17 @@
       font-weight: normal;
       color: white;
     }
+  }
+  &__toggle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding:20px;
+  }
+  &__buttons {
+    display: none;
   }
   &__button {
     background: none;
@@ -143,7 +149,7 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
-} 
+}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
@@ -153,10 +159,29 @@
     background-image: none;
   }
   .menu {
-    flex-direction: column;
-    justify-content: center;
+    &__toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: auto;
+      padding: 2rem;
+      padding-top: 3.1rem;
+      background-color: $red;
+      flex-direction: column;
+      justify-content: center;
+    }
     &__buttons {
+      position: absolute;
+      display: block;
+      top: 10px;
+      right: 1rem;
       z-index: 10;
+      padding: 10px 15px;
+      background-color: $red;
     }
     &__button {
       &--close {
@@ -184,7 +209,7 @@
   }
   #menu {
     &:target {
-      & .menu-toggle {
+      & .menu__toggle {
         display: flex;
       }
       & .menu__button--open {
@@ -195,7 +220,7 @@
       }
     }
     &:not(:target) {
-      & .menu-toggle {
+      & .menu__toggle {
         display: none;
       }
       & .menu__button--open {
@@ -205,19 +230,6 @@
         display: none;
       }
     }
-  }
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: auto;
-    padding: 2rem;
-    padding-top: 3.1rem;
-    background-color: $red;
   }
 }
 

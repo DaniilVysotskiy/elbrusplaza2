@@ -9,7 +9,7 @@
           .menu__buttons
             a.menu__button.menu__button--open(href="#menu") ☰
             a.menu__button.menu__button--close(href="#_") ⨯
-          div.menu-toggle
+          div.menu__toggle
             ul.menu__list
               li.menu__item.menu-item
                 nuxt-link.menu-item__link.menu-item__link--hotel(to="#hotel" active-class="active") {{ $t('LINKS.HOTEL') }}
