@@ -5,7 +5,9 @@
         h1.error__title(v-if="error.statusCode === 404")
           span.error--404 404
           span {{ $t('PAGE_NOT_FOUND') }}
-        h1(v-else) {{ $t('ERROR_OCCURED') }}
+        h1.error__title(v-else)
+          span.error--unknown ☹
+          span {{ $t('ERROR_OCCURED') }}
         nuxt-link.error__link(to="/") {{ $t('HOME_PAGE') }}
 </template>
 
@@ -38,7 +40,8 @@ export default {
       margin-bottom: 1rem;
       font-size: 1.5rem;
     }
-    &--404 {
+    &--404,
+    &--unknown {
       font-size: 10rem;
       color: $yellow;
       margin-bottom: 1rem;

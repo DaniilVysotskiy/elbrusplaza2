@@ -1,9 +1,9 @@
 <template lang="pug">
   .room-card
-    .room-card__img(:to="'/' + $store.state.locale + '/' + room.code")
+    .room-card__img(:to="'/' + currentLang + '/' + room.code")
       img(:src="'/imgs/rooms/' + room.code + '.jpg'")
     .room-card__info
-      .room-card__title.title--decor(:to="'/' + $store.state.locale + '/' + room.code") {{ room.name[currLang] }}
+      .room-card__title.title--decor(:to="'/' + currentLang + '/' + room.code") {{ room.name[currentLang] }}
       ul.room-card__params.room-params
         li.room-params__item.item
           .item__title {{ $t('ROOMS.ROOM_CARD.TOTAL_AREA') }}
@@ -20,7 +20,7 @@
           .item__value
             | {{ room.costPerNight | currency($t('ROOMS.ROOM_CARD.CURRENCY'), 0, { thousandsSeparator: ' ', symbolOnLeft: false, spaceBetweenAmountAndSymbol: true }) }}
       .room-card__button
-        nuxt-link.button.button--orange-outline(:to="'/' + $store.state.locale + '#contacts'" tag="button") {{ $t('ROOMS.BUTTONS.BOOK') }}
+        nuxt-link.button.button--orange-outline(:to="'/' + currentLang + '/room'" tag="button") {{ $t('ROOMS.BUTTONS.BOOK') }}
 </template>
 
 <script>
@@ -34,7 +34,7 @@ export default {
   props: ['room'],
   data () {
     return {
-      currLang: this.$store.state.locale
+      currentLang: this.$store.state.locale
     }
   },
   methods: {
@@ -54,6 +54,6 @@ export default {
 
 
 <style lang="scss">
-  
+
   @import './room-card.scss';
 </style>

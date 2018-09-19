@@ -3,7 +3,7 @@
     .container
       .nav__wrapper
         .nav__logo
-          a.logo__wrapper(href="/")
+          nuxt-link.logo__wrapper(to="/")
             img.logo(:src="changeLogoOnScroll")
         .nav__menu.menu#menu
           .menu__buttons
@@ -47,7 +47,8 @@ function throttle(actionFn) {
 export default {
   data () {
     return {
-      isTopOfPage: true
+      isTopOfPage: true,
+      currentLang: this.$store.state.locale
     }
   },
   methods: {
@@ -88,6 +89,6 @@ export default {
 
 
 <style lang="scss">
-  
+
   @import './nav.scss';
 </style>

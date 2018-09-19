@@ -7,7 +7,7 @@
     reviews
     myVideo
     contacts
-    //- myFooter
+    myFooter
 </template>
 
 <script>
@@ -18,7 +18,7 @@ import rooms from '~/components/rooms/rooms.vue'
 import reviews from '~/components/reviews/reviews.vue'
 import myVideo from '~/components/my-video/my-video.vue'
 import contacts from '~/components/contacts/contacts.vue'
-// import myFooter from '~/components/my-footer/my-footer.vue'
+import myFooter from '~/components/my-footer/my-footer.vue'
 
 export default {
   components: {
@@ -29,7 +29,7 @@ export default {
     reviews,
     myVideo,
     contacts,
-    // myFooter
+    myFooter
   }
 }
 </script>

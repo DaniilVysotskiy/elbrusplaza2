@@ -78,6 +78,15 @@ app.get('/api/rooms', (req, res) => {
   });
 })
 
+// GET - `/api/room/:type` to get room info from db by type
+app.get('/api/room/:type', (req, res) => {
+  const type = req.params.type;
+
+  Room.find({code: type}).then(room => {
+    res.json(room);
+  });
+})
+
 app.post('/api/feedback', (req, res) => {
   // Validate, sanitize and send
   const attributes = ['name', 'email', 'msg']; // Our three form fields, all required

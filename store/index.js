@@ -12,7 +12,8 @@ const store = () => new Vuex.Store({
     locales: ['ru', 'en'],
     locale: 'ru',
     authUser: null,
-    roomsList: []
+    roomsList: [],
+    room: {}
   },
 
   mutations: {
@@ -26,6 +27,9 @@ const store = () => new Vuex.Store({
     },
     FETCH_ROOMS(state, rooms) {
       state.roomsList = rooms;
+    },
+    FETCH_ROOM(state, room) {
+      state.room = room;
     }
   },
 
@@ -58,6 +62,15 @@ const store = () => new Vuex.Store({
       try {
         const { data } = await axios.get('/api/rooms');
         commit('FETCH_ROOMS', data);
+      } catch (error) {
+        throw error;
+      }
+    },
+
+    async fetchRoom({ commit }, { type })  {
+      try {
+        const { data } = await axios.get('/api/room/' + type);
+        commit('FETCH_ROOM', data[0]);
       } catch (error) {
         throw error;
       }
