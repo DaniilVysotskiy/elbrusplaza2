@@ -1,15 +1,16 @@
 <template lang="pug">
   div.room
     navigation
-    hotel
-    no-ssr
-      pre {{ room }}
+    roomHeader(:room="room")
+    //- roomBody
+    pre {{ room }}
     myFooter
 </template>
 
 <script>
 import navigation from '~/components/nav/nav.vue'
-import hotel from '~/components/hotel/hotel.vue'
+import roomHeader from '~/components/room-header/room-header.vue'
+// import roomBody from '~/components/room-body/room-body.vue'
 import myFooter from '~/components/my-footer/my-footer.vue'
 
 export default {
@@ -36,11 +37,16 @@ export default {
   },
   components: {
     navigation,
-    hotel,
+    roomHeader,
     myFooter
   }
 }
 </script>
 
 <style lang="scss">
+  .room {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 </style>

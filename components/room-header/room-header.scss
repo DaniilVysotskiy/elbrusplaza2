@@ -1,0 +1,25 @@
+.room-header {
+  min-height: 100vh;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $orange;
+      opacity: .9;
+      z-index: -1;
+    }
+  }
+}
