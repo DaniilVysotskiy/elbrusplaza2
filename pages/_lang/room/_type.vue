@@ -14,6 +14,7 @@ import roomHeader from '~/components/room-header/room-header.vue'
 import myFooter from '~/components/my-footer/my-footer.vue'
 
 export default {
+  scrollToTop: true,
   data() {
     return {
       room: {}

@@ -14,11 +14,6 @@
   }
   &__menu {
     background-color: $red;
-    background-image: url('~assets/imgs/nav-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    min-width: 640px;
     height: 52px;
   }
   &__logo {
@@ -33,22 +28,42 @@
     justify-content: center;
     align-items: center;
     margin: 0 -15px;
+    margin-right: 1rem;
     padding: 0;
     list-style: none;
+  }
+  &__back {
+    background: none;
+    border: none;
+    color: white;
+    margin-right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
   }
   &__item {
     flex: 1 1 auto;
   }
   &__lang {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 -15px;
     padding: 0;
+    padding-left: 1rem;
     list-style: none;
+    &--decorative {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 8px;
+      height: 90%;
+      transform: translateY(-50%);
+    }
   }
   &__lang-item {
     margin: 0 15px;
+    min-width: 25px;
   }
   &__lang-button {
     display: flex;

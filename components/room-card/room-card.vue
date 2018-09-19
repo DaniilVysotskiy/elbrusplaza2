@@ -20,7 +20,7 @@
           .item__value
             | {{ room.costPerNight | currency($t('ROOMS.ROOM_CARD.CURRENCY'), 0, { thousandsSeparator: ' ', symbolOnLeft: false, spaceBetweenAmountAndSymbol: true }) }}
       .room-card__button
-        nuxt-link.button.button--orange-outline(:to="'/' + currentLang + '/room'" tag="button") {{ $t('ROOMS.BUTTONS.BOOK') }}
+        nuxt-link.button.button--orange-outline(:to="'/' + currentLang + '/room/' + room.code" tag="button") {{ $t('ROOMS.BUTTONS.BOOK') }}
 </template>
 
 <script>
