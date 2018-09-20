@@ -25,8 +25,9 @@ export default {
   },
   computed: {
     imageUrl() {
-      this.room.code;
-      return `url('/imgs/rooms/${this.room.code}.jpg')`;
+      if (this.room.code !== undefined) {
+        return `url('/imgs/rooms/${this.room.code}.jpg')`;
+      }
     }
     // icon () {
     //   return faMale;

@@ -31,11 +31,22 @@ module.exports = {
   */
   router: {
     scrollBehavior: function (to, from, savedPosition) {
+      // let position = { x: 0, y: 0 };
       if (to.hash) {
         return {
           selector: to.hash
         }
       }
+      // if (savedPosition) {
+      //   position.x = savedPosition.x;
+      //   position.y = savedPosition.y;
+      // } else {
+      //   return new Promise(resolve => {
+      //     setTimeout(function() {
+      //       resolve(position);
+      //     }, 0);
+      //   });
+      // }
     },
     middleware: 'i18n'
   },

@@ -25,9 +25,9 @@
             ul.menu__lang
               .menu__lang--decorative.hatching-yellow
               li.menu__lang-item
-                nuxt-link.menu__lang-button(to="/ru" active-class="active" @click="setLang('ru')") RU
+                nuxt-link.menu__lang-button(:to="'/ru' + currentLink" active-class="active") RU
               li.menu__lang-item
-                nuxt-link.menu__lang-button(to="/en" active-class="active" @click="setLang('en')") EN
+                nuxt-link.menu__lang-button(:to="'/en' + currentLink" active-class="active") EN
 </template>
 
 <script>
@@ -62,9 +62,6 @@ export default {
         this.isTopOfPage = true;
       }
     },
-    setLang(lang) {
-      this.$store.commit('SET_LANG', lang);
-    },
     backToPreviousPage() {
       this.$router.back();
     }
@@ -76,6 +73,9 @@ export default {
       } else {
         return smallLogo;
       }
+    },
+    currentLink() {
+      return this.$route.path ? this.$route.path.substr(3, this.$route.path.length) : '';
     }
   },
   mounted() {

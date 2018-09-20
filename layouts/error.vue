@@ -1,6 +1,7 @@
 <template lang="pug">
   .error
     .container
+      navigation
       .error__wrapper
         h1.error__title(v-if="error.statusCode === 404")
           span.error--404 404
@@ -12,12 +13,17 @@
 </template>
 
 <script>
+import navigation from '~/components/nav/nav.vue'
+
 export default {
   props: {
     error: {
       type: Object,
       default: null
     }
+  },
+  components: {
+    navigation
   }
 }
 </script>
