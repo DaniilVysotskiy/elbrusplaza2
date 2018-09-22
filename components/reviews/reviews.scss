@@ -137,6 +137,9 @@
     &__content {
       margin: 3rem 0;
     }
+    &__container {
+      flex-direction: column;
+    }
     &__item {
       min-width: initial;
     }

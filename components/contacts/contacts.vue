@@ -35,7 +35,7 @@
                   p.feedback__text
                     font-awesome-icon.icon.icon--white(:icon="icons.faComment")
                     | {{ $t('CONTACTS.FEEDBACK_FORM') }}
-                  form.feedback__form.form(@submit.prevent="sendFeedback")
+                  form.feedback__form.form(method="post" action="https://formspree.io/info@elbrusplaza.com")
                     .form__row
                       .form__group
                         input(v-model="name" name="name" :placeholder="$t('CONTACTS.FORM.NAME')")
