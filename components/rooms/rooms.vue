@@ -30,7 +30,7 @@
         img.decorative-element-right(src="~/assets/imgs/rooms_decor_right.png")
         .container
           .decorative-element.hatching-orange
-          roomCard.rooms__card(v-for="(room, index) in $store.state.roomsList" :key="index" :room="room")
+          roomCard.rooms__card(v-for="(room, index) in rooms" :key="index" :room="room")
 </template>
 
 <script>
@@ -42,7 +42,65 @@ export default {
     return {
       scheduleTime: '',
       currLang: this.$store.state.locale,
-      notBefore: new Date()
+      notBefore: new Date(),
+      rooms: [
+        {
+          "name": { "ru":"Standart", "en": "Standart"},
+          "area": 40,
+          "guestsNumber": 2,
+          "costPerNight": 5000,
+          "previewImg": "",
+          "code": "standart"
+        },
+        {
+          "name": { "ru":"Standart+", "en": "Standart+"},
+          "area": 40,
+          "guestsNumber": 2,
+          "costPerNight": 6000,
+          "previewImg": "",
+          "code": "standart-plus"
+        },
+        {
+          "name": { "ru":"Panorama", "en": "Panorama"},
+          "area": 50,
+          "guestsNumber": 2,
+          "costPerNight": 7000,
+          "previewImg": "",
+          "code": "panorama"
+        },
+        {
+          "name": { "ru":"Luxe 2-х комнатный", "en": "Luxe 2 rooms"},
+          "area": 50,
+          "guestsNumber": 2,
+          "costPerNight": 7000,
+          "previewImg": "",
+          "code": "luxe-2-rooms"
+        },
+        {
+          "name": { "ru":"Grand Luxe", "en": "Grand Luxe"},
+          "area": 80,
+          "guestsNumber": 3,
+          "costPerNight": 8500,
+          "previewImg": "",
+          "code": "grand-luxe"
+        },
+        {
+          "name": { "ru":"Luxe 2-х двухуровневый", "en": "Luxe 2 floors"},
+          "area": 80,
+          "guestsNumber": 4,
+          "costPerNight": 10000,
+          "previewImg": "",
+          "code": "luxe-2-floors"
+        },
+        {
+          "name": { "ru":"Family", "en": "Family"},
+          "area": 100,
+          "guestsNumber": 4,
+          "costPerNight": 14000,
+          "previewImg": "",
+          "code": "family"
+        }
+      ]
     }
   },
   methods: {
