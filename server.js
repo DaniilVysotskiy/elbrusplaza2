@@ -112,5 +112,5 @@ if (!isProd) {
 }
 
 app.use(nuxt.render);
-app.listen(80);
-console.log('Server is listening on localhost:80');
+app.listen(8080);
+console.log('Server is listening on localhost:8080');
