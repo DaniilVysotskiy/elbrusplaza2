@@ -19,9 +19,9 @@
                     font-awesome-icon.icon(:icon="icons.faMapMarkerAlt")
                     | {{ $t('CONTACTS.ADDRESS') }}
                   .info__contacts
-                    a.info__phone(href="tel:+7 (928) 912-11-12")
+                    a.info__phone(href="tel:+7 (928) 912-11-22")
                       font-awesome-icon.icon(:icon="icons.faPhone" style="transform: rotate(90deg);")
-                      | +7 (928) 912-11-12
+                      | +7 (928) 912-11-22
                     a.info__email(href="mailto:info@elbrusplaza.com")
                       font-awesome-icon.icon(:icon="icons.faEnvelope")
                       | info@elbrusplaza.com
