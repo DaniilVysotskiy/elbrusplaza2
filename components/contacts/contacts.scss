@@ -175,6 +175,8 @@
     left: 0;
     color: $orange;
     font-size: 1rem;
+    max-width: 20px;
+    max-height: 20px;
     &--white {
       color: white;
       top: 50%;
@@ -196,7 +198,7 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
-} 
+}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
